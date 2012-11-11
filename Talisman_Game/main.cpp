@@ -41,6 +41,8 @@ int main(void){
 	cout << "Craft: " << d1->getCraft() << " (" << d1->getBaseCraft() << " Base + " << d1->getCounterCraft() << " Counters)" << endl; 
 	cout << endl;
 
+	
+
 	cout << a1->getName() <<" has been created." << endl;
 	cout << h1->getName() <<" has been created." << endl;
 	cout << s1->getName() <<" has been created." << endl;

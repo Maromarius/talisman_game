@@ -55,6 +55,12 @@
     <Filter Include="Header Files\Enemy\Animal">
       <UniqueIdentifier>{6531c92a-4a91-491e-bf2e-4ab1c308bbb5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Enemy\Construct">
+      <UniqueIdentifier>{4f8af574-a642-4461-be25-21f463fc1662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy\Construct">
+      <UniqueIdentifier>{aa239b7c-efa0-41f3-8485-9f2a08406116}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Warrior.h">
@@ -98,6 +104,9 @@
     </ClInclude>
     <ClInclude Include="Bear.h">
       <Filter>Header Files\Enemy\Animal</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleHulk.h">
+      <Filter>Header Files\Enemy\Construct</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +154,9 @@
     </ClCompile>
     <ClCompile Include="Bear.cpp">
       <Filter>Source Files\Enemy\Animal</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleHulk.cpp">
+      <Filter>Source Files\Enemy\Construct</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

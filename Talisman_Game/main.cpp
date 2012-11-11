@@ -19,6 +19,8 @@ int main(void){
 
 
 	Object *a1 = new Axe();
+	
+	
 	Object *s1 = new Sword();
 	Object *h1 = new Helmet();
 	Object *a2 = new Armour();

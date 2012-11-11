@@ -37,6 +37,12 @@
     <Filter Include="Source Files\Object\Weapon">
       <UniqueIdentifier>{c2709878-6893-4f5a-967d-f8483900e951}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Map">
+      <UniqueIdentifier>{e5f23699-8232-4064-8cc6-aaf8ee88094a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Map">
+      <UniqueIdentifier>{d8cdbb7f-34b9-435e-a2c1-c6979dd86198}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Warrior.h">
@@ -68,6 +74,12 @@
     </ClInclude>
     <ClInclude Include="Armour.h">
       <Filter>Header Files\Object\Armor</Filter>
+    </ClInclude>
+    <ClInclude Include="Region.h">
+      <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +115,12 @@
     </ClCompile>
     <ClCompile Include="Armour.cpp">
       <Filter>Source Files\Object\Armor</Filter>
+    </ClCompile>
+    <ClCompile Include="Region.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\Map</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

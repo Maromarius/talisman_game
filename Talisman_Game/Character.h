@@ -3,10 +3,11 @@
 #include <iostream>
 #include <vector>
 #include "Object.h"
+#include "Map.h"
 
 using namespace std;
 
-class Character
+class  Character
 {
 
 protected: //TO CHANGE!!!
@@ -38,7 +39,7 @@ protected: //TO CHANGE!!!
 	bool isToad;			// Is the character currently inflicted with Toad status?
 	int numToadTurnsLeft;	// How many turns does the character have left of being a Toad?
 	
-	string location;
+	string startinglocation;
 	string alignment;
 	string profession;
 

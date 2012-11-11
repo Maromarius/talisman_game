@@ -36,7 +36,7 @@ Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _base
     baseFate = _baseFate;
 	currentFate = _baseFate;
     numOfSpells = _numOfSpells;
-    location = _location;
+    startinglocation = _location;
     alignment = _alignment;
 }
 
@@ -54,7 +54,7 @@ Character::~Character(void)
     currentFate = 0;
     trophies = 0;
     numOfSpells = 0;
-    location = "";
+    startinglocation = "";
     alignment = "";
 	profession = "";
     hasMule = 0;

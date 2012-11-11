@@ -4,9 +4,9 @@
 
 using namespace std;
 
-Object::Object(string _name, string _description){
+Object::Object(string name, string _description){
 
-	name = _name;
+	this->name = name;
 	description = _description;
 }
 

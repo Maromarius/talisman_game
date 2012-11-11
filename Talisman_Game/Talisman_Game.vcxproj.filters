@@ -43,6 +43,18 @@
     <Filter Include="Source Files\Map">
       <UniqueIdentifier>{d8cdbb7f-34b9-435e-a2c1-c6979dd86198}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Enemy">
+      <UniqueIdentifier>{c4523ffe-2064-40df-acae-607eedf848fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy">
+      <UniqueIdentifier>{53e8c5d8-9b83-4915-8400-6d55b3ea9775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy\Animal">
+      <UniqueIdentifier>{f4a8a8be-cf4b-458a-9b44-ceaee813e68a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enemy\Animal">
+      <UniqueIdentifier>{6531c92a-4a91-491e-bf2e-4ab1c308bbb5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Warrior.h">
@@ -80,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>Header Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Bear.h">
+      <Filter>Header Files\Enemy\Animal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +139,12 @@
     </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Bear.cpp">
+      <Filter>Source Files\Enemy\Animal</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

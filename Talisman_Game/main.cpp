@@ -8,6 +8,9 @@
 #include "Sword.h"
 #include "Helmet.h"
 #include "Armour.h"
+#include "Map.h"
+#include "Region.h"
+#include "Bear.h"
 
 #include <iostream>
 
@@ -17,6 +20,7 @@ using namespace std;
 
 int main(void){
 
+	Map *talismanMap = new Map();
 
 	Object *a1 = new Axe();
 	Object *s1 = new Sword();
@@ -26,6 +30,11 @@ int main(void){
 	Character *w1 = new Warrior();
 	Character *d1 = new Druid();
 	
+	Enemy *b1 = new Bear();
+	
+	cout<<"A new Enemy: "<<b1->getName()<<endl;
+	cout<<"Description: "<<b1->getDescription()<<endl;
+	cout << endl;
 	
 	cout << "Warrior has been created." << endl;
 	cout << w1->getProfession() << "'s stats are as follows:" << endl;

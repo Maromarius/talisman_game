@@ -1,10 +1,22 @@
-﻿Build started 09/11/2012 6:52:44 PM.
-     1>Project "C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\Talisman_Game\Talisman_Game.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/11/2012 2:17:04 PM.
+     1>Project "C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Armor.cpp Armour.cpp Axe.cpp Character.cpp Druid.cpp Helmet.cpp main.cpp Object.cpp Sword.cpp Warrior.cpp Weapon.cpp
+         Weapon.cpp
+         Warrior.cpp
+         Sword.cpp
+         Object.cpp
          main.cpp
+         Helmet.cpp
+         Druid.cpp
+         Character.cpp
+     1>c:\users\maro\dropbox\rami\comp 345\talisman_game\trunk\talisman_game\character.cpp(258): warning C4018: '<' : signed/unsigned mismatch
+         Axe.cpp
+         Armour.cpp
+         Armor.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\Debug\Talisman_Game.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\Debug\Talisman_Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\Debug\Talisman_Game.lib" /MACHINE:X86 Debug\Armor.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\trunk\Debug\Talisman_Game.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\trunk\Debug\Talisman_Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\trunk\Debug\Talisman_Game.lib" /MACHINE:X86 Debug\Armor.obj
          Debug\Armour.obj
          Debug\Axe.obj
          Debug\Character.obj
@@ -15,9 +27,9 @@
          Debug\Sword.obj
          Debug\Warrior.obj
          Debug\Weapon.obj
-         Talisman_Game.vcxproj -> C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\Debug\Talisman_Game.exe
-     1>Done Building Project "C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\Talisman_Game\Talisman_Game.vcxproj" (Build target(s)).
+         Talisman_Game.vcxproj -> C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\trunk\Debug\Talisman_Game.exe
+     1>Done Building Project "C:\Users\Maro\Dropbox\Rami\COMP 345\Talisman_Game\trunk\Talisman_Game\Talisman_Game.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:15.91
+Time Elapsed 00:00:12.82

@@ -1,6 +1,6 @@
 #include "Monk.h"
 
-const string Monk::LOCATION = "Village";
+const string Monk::LOCATION = "VILLAGE";
 const string Monk::ALIGNMENT = "Good";
 const string Monk::PROFESSION = "Monk";
 

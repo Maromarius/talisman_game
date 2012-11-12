@@ -1,6 +1,6 @@
 #include "Druid.h"
 
-const string Druid::LOCATION = "Forest";
+const string Druid::LOCATION = "FOREST";
 const string Druid::ALIGNMENT = "Neutral";
 const string Druid::PROFESSION = "Druid";
 

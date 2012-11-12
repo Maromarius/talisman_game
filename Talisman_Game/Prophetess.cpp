@@ -1,6 +1,6 @@
 #include "Prophetess.h"
 
-const string Prophetess::LOCATION = "Chapel";
+const string Prophetess::LOCATION = "CHAPEL";
 const string Prophetess::ALIGNMENT = "Good";
 const string Prophetess::PROFESSION = "Prophetess";
 

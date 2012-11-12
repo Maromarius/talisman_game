@@ -1,6 +1,6 @@
 #include "Assassin.h"
 
-const string Assassin::LOCATION = "City";
+const string Assassin::LOCATION = "CITY";
 const string Assassin::ALIGNMENT = "Evil";
 const string Assassin::PROFESSION = "Assassin";
 

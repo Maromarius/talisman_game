@@ -71,7 +71,7 @@ int main(void){
 	for (int i=0; i<numberOfPlayers; i++)
 	{
 		cout << "Creating Player " << i << endl;
-		new (&players[i]) Player(isInPlay);
+		new (&players[i]) Player(TalismanMap, isInPlay);
 	}	
 
 	//--------------GAME--------------
@@ -82,22 +82,24 @@ int main(void){
 		if(!players[turn].checkIfPermaDead())
 		{
 			cout << "\nIt is currently Player " << turn << "'s turn!" << endl;
-			cout << players[turn].getCharacter().getProfession() << ", please press any key to roll the die." << endl;
+			cout << players[turn].getCharacter().getProfession() << ", you are at the "<< players[turn].getCurrentArea()<<" please press any key to roll the die." << endl;
 			system("PAUSE");
 			cout << "You have rolled a " << diceRoll() << "!" << endl;
 		}
 
-		
-		turn++;
-		if(turn == numberOfPlayers)
-			turn = 0;
+
+
+
+
+
+
+
+
+		(turn == numberOfPlayers-1)?(turn=0):(turn++);
 	}	
 
 
-		//break;
-	//}
-	
-	
+			
 	system("PAUSE");
 	return 0;
 }

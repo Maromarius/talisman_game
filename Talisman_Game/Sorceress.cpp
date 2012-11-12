@@ -1,6 +1,6 @@
 #include "Sorceress.h"
 
-const string Sorceress::LOCATION = "Graveyard";
+const string Sorceress::LOCATION = "GRAVEYARD";
 const string Sorceress::ALIGNMENT = "Evil";
 const string Sorceress::PROFESSION = "Sorceress";
 

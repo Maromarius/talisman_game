@@ -1,6 +1,6 @@
 #include "Warrior.h"
 
-const string Warrior::LOCATION = "Tavern";
+const string Warrior::LOCATION = "TAVERN";
 const string Warrior::ALIGNMENT = "Neutral";
 const string Warrior::PROFESSION = "Warrior";
 

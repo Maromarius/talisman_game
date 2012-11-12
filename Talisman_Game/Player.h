@@ -1,7 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <iostream>
-
+#include "Map.h"
 #include "Player.h"
 #include "Character.h"
 
@@ -28,17 +28,19 @@ class Player
 {
 	protected:
 		Character character;
-		//Area currentArea;
+		Area* currentArea;
 		bool isPermaDead;
 		static const int NUMBEROFCHARACTERS = 14;
 
 	public:
 		Player::Player(void);
-		Player::Player(int[]);
+		Player::Player(Map * Board, int[]);
 		Player::~Player(void);
 		Character Player::createCharacter(int);
 		Character Player::getCharacter(void);
 		bool Player::checkIfPermaDead(void);
 		void Player::isNowPermaDead(void);
+		void Player::setCurrentArea(Map * Board, string TargetArea);
+		string Player::getCurrentArea(void);
 };
 #endif

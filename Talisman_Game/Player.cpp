@@ -9,7 +9,7 @@ Player::Player()
 	//character = createCharacter();
 }
 
-Player::Player(int isInPlay[])
+Player::Player(Map* Board, int isInPlay[])
 {
 	// Roll for a random character 
 		int characterRoll;
@@ -27,6 +27,7 @@ Player::Player(int isInPlay[])
 
 		character = createCharacter(characterRoll);
 		isPermaDead = false;
+		Player::setCurrentArea(Board,character.getSpawnPoint());
 }
 
 Player::~Player()
@@ -114,4 +115,14 @@ Character Player::createCharacter(int characterRoll)
 Character Player::getCharacter()
 {
 	return character;
+}
+
+void Player::setCurrentArea(Map * Board, string TargetArea)
+{
+	this->currentArea = Board->OutterRegion.getArea(TargetArea);
+}
+
+string Player::getCurrentArea(void)
+{
+	return currentArea->areaName;
 }

@@ -50,7 +50,7 @@ int main(void){
 	//Map* TalismanMap = new Map();
 
 	// Character Setup
-		cout<<"How many players will be playing this game? (PUT 6 OR IT WILL CRASH. TESTING PURPOSES.)"<<endl;	
+		cout<<"How many players will be playing this game?"<<endl;	
 		cin>>numberOfPlayers;
 		numberOfPlayersAlive = numberOfPlayers;
 		Player *players = new Player[numberOfPlayers];
@@ -75,7 +75,7 @@ int main(void){
 
 			i++;
 			turn++;
-			if(turn == 6)
+			if(turn == numberOfPlayers)
 				turn = 0;
 		}	
 

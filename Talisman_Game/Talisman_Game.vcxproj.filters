@@ -55,12 +55,6 @@
     <Filter Include="Header Files\Enemy\Animal">
       <UniqueIdentifier>{6531c92a-4a91-491e-bf2e-4ab1c308bbb5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Enemy\Construct">
-      <UniqueIdentifier>{4f8af574-a642-4461-be25-21f463fc1662}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Enemy\Construct">
-      <UniqueIdentifier>{aa239b7c-efa0-41f3-8485-9f2a08406116}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Player">
       <UniqueIdentifier>{b6b26ff2-cefa-4ad0-b954-6451269aae3c}</UniqueIdentifier>
     </Filter>
@@ -72,6 +66,24 @@
     </Filter>
     <Filter Include="Source Files\Areas">
       <UniqueIdentifier>{d6bfb3e1-30df-48c4-a8a0-bb2d6d8a8d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enemy\Monster">
+      <UniqueIdentifier>{a2f21376-d013-43da-a0a9-2297a36f50bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy\Monster">
+      <UniqueIdentifier>{4c9c4298-b100-4916-bfa3-6b2e68409c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enemy\Spirit">
+      <UniqueIdentifier>{2cc902d6-9c1e-41fc-a738-38442f763595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy\Spirit">
+      <UniqueIdentifier>{80caea40-5921-4636-a718-11eec903c5eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enemy\Dragon">
+      <UniqueIdentifier>{a46c9504-4eb4-459b-9cf6-76208bd377d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy\Dragon">
+      <UniqueIdentifier>{843b0442-0cd7-4e0b-bd63-8f2bc3d08818}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -111,14 +123,8 @@
     <ClInclude Include="Map.h">
       <Filter>Header Files\Map</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Bear.h">
       <Filter>Header Files\Enemy\Animal</Filter>
-    </ClInclude>
-    <ClInclude Include="BattleHulk.h">
-      <Filter>Header Files\Enemy\Construct</Filter>
     </ClInclude>
     <ClInclude Include="Area.h">
       <Filter>Header Files\Map</Filter>
@@ -258,6 +264,60 @@
     <ClInclude Include="Pits.h">
       <Filter>Header Files\Areas</Filter>
     </ClInclude>
+    <ClInclude Include="Ape.h">
+      <Filter>Header Files\Enemy\Animal</Filter>
+    </ClInclude>
+    <ClInclude Include="Bandit.h">
+      <Filter>Header Files\Enemy\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Demon.h">
+      <Filter>Header Files\Enemy\Spirit</Filter>
+    </ClInclude>
+    <ClInclude Include="Dragon.h">
+      <Filter>Header Files\Enemy\Dragon</Filter>
+    </ClInclude>
+    <ClInclude Include="Ghost.h">
+      <Filter>Header Files\Enemy\Spirit</Filter>
+    </ClInclude>
+    <ClInclude Include="Giant.h">
+      <Filter>Header Files\Enemy\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Goblin.h">
+      <Filter>Header Files\Enemy\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Hobgoblin.h">
+      <Filter>Header Files\Enemy\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Lemure.h">
+      <Filter>Header Files\Enemy\Spirit</Filter>
+    </ClInclude>
+    <ClInclude Include="Lion.h">
+      <Filter>Header Files\Enemy\Animal</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogre.h">
+      <Filter>Header Files\Enemy\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Serpent.h">
+      <Filter>Header Files\Enemy\Animal</Filter>
+    </ClInclude>
+    <ClInclude Include="Shadow.h">
+      <Filter>Header Files\Enemy\Spirit</Filter>
+    </ClInclude>
+    <ClInclude Include="Spectre.h">
+      <Filter>Header Files\Enemy\Spirit</Filter>
+    </ClInclude>
+    <ClInclude Include="WildBoar.h">
+      <Filter>Header Files\Enemy\Animal</Filter>
+    </ClInclude>
+    <ClInclude Include="Wolf.h">
+      <Filter>Header Files\Enemy\Animal</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Wraith.h">
+      <Filter>Header Files\Enemy\Spirit</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp">
@@ -301,9 +361,6 @@
     </ClCompile>
     <ClCompile Include="Bear.cpp">
       <Filter>Source Files\Enemy\Animal</Filter>
-    </ClCompile>
-    <ClCompile Include="BattleHulk.cpp">
-      <Filter>Source Files\Enemy\Construct</Filter>
     </ClCompile>
     <ClCompile Include="Area.cpp">
       <Filter>Source Files\Map</Filter>
@@ -397,6 +454,57 @@
     </ClCompile>
     <ClCompile Include="Mines.cpp">
       <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Ape.cpp">
+      <Filter>Source Files\Enemy\Animal</Filter>
+    </ClCompile>
+    <ClCompile Include="Bandit.cpp">
+      <Filter>Source Files\Enemy\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Demon.cpp">
+      <Filter>Source Files\Enemy\Spirit</Filter>
+    </ClCompile>
+    <ClCompile Include="Ghost.cpp">
+      <Filter>Source Files\Enemy\Spirit</Filter>
+    </ClCompile>
+    <ClCompile Include="Dragon.cpp">
+      <Filter>Source Files\Enemy\Dragon</Filter>
+    </ClCompile>
+    <ClCompile Include="Giant.cpp">
+      <Filter>Source Files\Enemy\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Goblin.cpp">
+      <Filter>Source Files\Enemy\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Hobgoblin.cpp">
+      <Filter>Source Files\Enemy\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Lemure.cpp">
+      <Filter>Source Files\Enemy\Spirit</Filter>
+    </ClCompile>
+    <ClCompile Include="Lion.cpp">
+      <Filter>Source Files\Enemy\Animal</Filter>
+    </ClCompile>
+    <ClCompile Include="Ogre.cpp">
+      <Filter>Source Files\Enemy\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Serpent.cpp">
+      <Filter>Source Files\Enemy\Animal</Filter>
+    </ClCompile>
+    <ClCompile Include="Shadow.cpp">
+      <Filter>Source Files\Enemy\Spirit</Filter>
+    </ClCompile>
+    <ClCompile Include="Spectre.cpp">
+      <Filter>Source Files\Enemy\Spirit</Filter>
+    </ClCompile>
+    <ClCompile Include="WildBoar.cpp">
+      <Filter>Source Files\Enemy\Animal</Filter>
+    </ClCompile>
+    <ClCompile Include="Wolf.cpp">
+      <Filter>Source Files\Enemy\Animal</Filter>
+    </ClCompile>
+    <ClCompile Include="Wraith.cpp">
+      <Filter>Source Files\Enemy\Spirit</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

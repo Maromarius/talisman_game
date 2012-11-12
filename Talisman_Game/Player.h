@@ -9,7 +9,7 @@ class Player
 {
 	protected:
 		Character character;
-		Area currentSpace;
+		Area currentArea;
 		bool isPermaDead;
 
 	public:

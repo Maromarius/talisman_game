@@ -1,4 +1,5 @@
 #include "Map.h"
+#include "Player.h"
 #include "Character.h"
 #include "Druid.h"
 #include "Warrior.h"
@@ -39,7 +40,7 @@ int main(void){
 
 	//Chracter Setup
 	int numberOfPlayers;
-	Character *Players[MAXNUMBEROFPLAYERS]; 
+	Player *Players[MAXNUMBEROFPLAYERS]; 
 	cout<<"How many players will be playing this game?"<<endl;
 	//needs to be get idiot proofed
 	cin>>numberOfPlayers;
@@ -49,7 +50,7 @@ int main(void){
 		{
 			//Random Selection 
 
-			Players[i]->currentLocation = TalismanMap->OutterRegion.getArea(Players[i]->getSpawnPoint());
+			Players[i]->currentArea = TalismanMap->OutterRegion.getArea(Players[i]->character->getSpawnPoint());
 		}
 		
 	//Game Loop (add spawning boolean)

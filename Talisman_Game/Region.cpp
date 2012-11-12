@@ -15,18 +15,18 @@ Region::~Region()
 	delete tail;
 }
 
-void Region::addAtHead(string data)
+void Region::addAtHead(string areaName)
 {
 	if (this->head == NULL)
 	{
-		this->head = new Area(data);
+		this->head = new Area(areaName);
 		this->tail = this->head;
 		this->head->left = this->head;
 		this->head->right = this->head;		
 	}
 	else
 	{
-		Area* temp = new Area(data);
+		Area* temp = new Area(areaName);
 		
 		tail->left = temp;
 		head->right = temp;
@@ -36,18 +36,18 @@ void Region::addAtHead(string data)
 	}
 }
 
-void Region::addAtTail(string data)
+void Region::addAtTail(string areaName)
 {
 	if (this->head == NULL)
 	{
-		this->head = new Area(data);
+		this->head = new Area(areaName);
 		this->tail = this->head;
 		this->head->left = this->head;
 		this->head->right = this->head;		
 	}
 	else
 	{
-		Area* temp = new Area(data);
+		Area* temp = new Area(areaName);
 		
 		tail->left = temp;
 		head->right = temp;
@@ -58,16 +58,16 @@ void Region::addAtTail(string data)
 	}
 }
 
-void Region::deleteArea(string data)
+void Region::deleteArea(string queryName)
 { 
 	Area* cursor = this->head;
 	bool found = true;  
 
 
-	while (cursor->data != data)
+	while (cursor->areaName != queryName)
 	{
 		cursor = cursor->left;
-		if(cursor->data == head->data)	//Back at start without finding data
+		if(cursor->areaName == head->areaName)	//Back at start without finding data
 		{	
 			found = false;	
 			break;
@@ -91,16 +91,16 @@ bool Region::isEmpty()
 	return (this->head==NULL);
 }
 
-Area* Region::getArea(string QueryArea)
+Area* Region::getArea(string queryName)
 {
 	Area* cursor = this->head;
 	bool found = true;  
 
 
-	while (cursor->data != QueryArea)
+	while (cursor->areaName != queryName)
 	{
 		cursor = cursor->left;
-		if(cursor->data == head->data)	//Back at start without finding data
+		if(cursor->areaName == head->areaName)	//Back at start without finding data
 		{	
 			found = false;	
 			break;
@@ -112,7 +112,7 @@ Area* Region::getArea(string QueryArea)
 	}
 	else
 	{
-	cout<<QueryArea<<" is not a found, please review and try again."<<endl;
+	cout<<queryName<<" is not a found, please review and try again."<<endl;
 	return NULL;
 	}
 

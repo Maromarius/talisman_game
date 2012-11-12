@@ -1,152 +1,45 @@
-﻿Build started 11/11/2012 8:19:50 PM.
+﻿Build started 11/11/2012 8:29:57 PM.
      1>Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\Talisman_Game.unsuccessfulbuild".
        ClCompile:
-         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Area.cpp Armor.cpp Armour.cpp Assassin.cpp Axe.cpp BattleHulk.cpp Bear.cpp Character.cpp Druid.cpp Dwarf.cpp Elf.cpp Enemy.cpp Ghoul.cpp Helmet.cpp main.cpp Map.cpp Ministrel.cpp Monk.cpp Object.cpp Player.cpp Priest.cpp Prophetess.cpp Region.cpp Sorceress.cpp Sword.cpp Thief.cpp Troll.cpp Warrior.cpp Weapon.cpp Wizard.cpp
-         Wizard.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Weapon.cpp
-         Warrior.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Troll.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Thief.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Sword.cpp
-         Sorceress.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Region.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(14): error C2248: 'Area::~Area' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(20) : compiler has generated 'Area::~Area' here
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(15): error C2248: 'Area::~Area' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(20) : compiler has generated 'Area::~Area' here
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(22): error C2248: 'Area::Area' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(18) : see declaration of 'Area::Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(24): error C2248: 'Area::left' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(12) : see declaration of 'Area::left'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(25): error C2248: 'Area::right' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(13) : see declaration of 'Area::right'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(29): error C2248: 'Area::Area' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(18) : see declaration of 'Area::Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(31): error C2248: 'Area::left' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(12) : see declaration of 'Area::left'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(32): error C2248: 'Area::right' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(13) : see declaration of 'Area::right'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(33): error C2248: 'Area::left' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(12) : see declaration of 'Area::left'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(34): error C2248: 'Area::right' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(13) : see declaration of 'Area::right'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(43): error C2248: 'Area::Area' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(18) : see declaration of 'Area::Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(45): error C2248: 'Area::left' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(12) : see declaration of 'Area::left'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(46): error C2248: 'Area::right' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(13) : see declaration of 'Area::right'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(50): error C2248: 'Area::Area' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(18) : see declaration of 'Area::Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(52): error C2248: 'Area::left' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(12) : see declaration of 'Area::left'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(53): error C2248: 'Area::right' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(13) : see declaration of 'Area::right'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(54): error C2248: 'Area::left' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(12) : see declaration of 'Area::left'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(55): error C2248: 'Area::right' : cannot access private member declared in class 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(13) : see declaration of 'Area::right'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(67): error C2039: 'data' : is not a member of 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\region.cpp(67): fatal error C1903: unable to recover from previous error(s); stopping compilation
-         Prophetess.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Priest.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Player.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Object.cpp
-         Monk.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Ministrel.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Map.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         main.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\main.cpp(38): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\main.cpp(130): error C2228: left of '.setCharacter' must have class/struct/union
-                 type is 'Player *'
-                 did you intend to use '->' instead?
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\main.cpp(131): error C2039: 'currentSpace' : is not a member of 'Player'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\player.h(9) : see declaration of 'Player'
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\main.cpp(131): error C2065: 'Players' : undeclared identifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\main.cpp(131): error C2227: left of '->getSpawnPoint' must point to class/struct/union/generic type
-         Helmet.cpp
-         Ghoul.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Enemy.cpp
-         Elf.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Generating Code...
-         Compiling...
-         Dwarf.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Druid.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Character.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\character.cpp(257): warning C4018: '<' : signed/unsigned mismatch
-         Bear.cpp
-         BattleHulk.cpp
-         Axe.cpp
-         Assassin.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-         Armour.cpp
-         Armor.cpp
-         Area.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.cpp(4): error C2511: 'Area::Area(void)' : overloaded member function not found in 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
-         Generating Code...
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Talisman_Game.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.lib" /MACHINE:X86 Debug\Area.obj
+         Debug\Armor.obj
+         Debug\Armour.obj
+         Debug\Assassin.obj
+         Debug\Axe.obj
+         Debug\BattleHulk.obj
+         Debug\Bear.obj
+         Debug\Character.obj
+         Debug\Druid.obj
+         Debug\Dwarf.obj
+         Debug\Elf.obj
+         Debug\Enemy.obj
+         Debug\Ghoul.obj
+         Debug\Helmet.obj
+         Debug\main.obj
+         Debug\Map.obj
+         Debug\Ministrel.obj
+         Debug\Monk.obj
+         Debug\Object.obj
+         Debug\Player.obj
+         Debug\Priest.obj
+         Debug\Prophetess.obj
+         Debug\Region.obj
+         Debug\Sorceress.obj
+         Debug\Sword.obj
+         Debug\Thief.obj
+         Debug\Troll.obj
+         Debug\Warrior.obj
+         Debug\Weapon.obj
+         Debug\Wizard.obj
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall Player::Player(void)" (??0Player@@QAE@XZ) referenced in function _main
+     1>Region.obj : error LNK2019: unresolved external symbol "public: __thiscall Area::~Area(void)" (??1Area@@QAE@XZ) referenced in function "public: void * __thiscall Area::`scalar deleting destructor'(unsigned int)" (??_GArea@@QAEPAXI@Z)
+     1>C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.exe : fatal error LNK1120: 2 unresolved externals
      1>Done Building Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:23.73
+Time Elapsed 00:00:00.37

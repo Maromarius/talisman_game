@@ -4,19 +4,22 @@
 Character character;
 bool isPermaDead;
 
-Player::Player(){
+Player::Player()
+{
 	//character = createCharacter();
 }
 
-Player::Player(int isInPlay[]){
+Player::Player(int isInPlay[])
+{
 	// Roll for a random character 
 		int characterRoll;
-		bool keepLooping = true;
 
-		while(true){
+		while(true)
+		{
 			srand((unsigned int)time(0));
 			characterRoll = rand() % NUMBEROFCHARACTERS;
-			if(isInPlay[characterRoll] == 0){
+			if(isInPlay[characterRoll] == 0)
+			{
 				isInPlay[characterRoll] = 1;
 				break;
 			}			
@@ -30,15 +33,18 @@ Player::~Player()
 {
 }
 
-bool Player::checkIfPermaDead(void){
+bool Player::checkIfPermaDead(void)
+{
 	return isPermaDead;
 }
 
-void Player::isNowPermaDead(void){
+void Player::isNowPermaDead(void)
+{
 	isPermaDead = true;
 }
 
-Character Player::createCharacter(int characterRoll){
+Character Player::createCharacter(int characterRoll)
+{
 	// Create & return the character
 		Character *character;
 		
@@ -105,6 +111,7 @@ Character Player::createCharacter(int characterRoll){
 
 }
 
-Character Player::getCharacter(){
+Character Player::getCharacter()
+{
 	return character;
 }

@@ -165,6 +165,99 @@
     <ClInclude Include="City.h">
       <Filter>Header Files\Areas</Filter>
     </ClInclude>
+    <ClInclude Include="Fields.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Hills.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Plains.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Woods.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Tavern.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Ruins.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Forest.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Village.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Graveyard.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Sentinel.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapel.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Crags.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="WarlocksCave.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Desert.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Oasis.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Temple.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Runes.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Castle.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="PortalOfPower.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackKnight.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="HiddenValley.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="CursedGlade.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Chasm.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="ValleyOfFire.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="WerewolfDen.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="DiceWithHeart.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypt.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="PlainOfPeril.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Mines.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="VampiresTower.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
+    <ClInclude Include="Pits.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp">

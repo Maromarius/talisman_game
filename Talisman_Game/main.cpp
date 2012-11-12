@@ -1,17 +1,26 @@
 #include "Map.h"
 #include "Player.h"
 #include "Character.h"
-
 #include "Object.h"
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 
 using namespace std;
 
+const int MAXNUMBEROFPLAYERS = 6;
 const int NUMBEROFCHARACTERS = 14;
 int isInPlay[NUMBEROFCHARACTERS];
+int numberOfPlayers;
+int numberOfPlayersAlive = 0;
+int SmallStrengthCounters = 32;
+int BigStrengthCounters = 8;
+int SmallCraftCounters = 32;
+int BigCraftCounters = 8;
+int LivesCounters = 40;
+int FateCounters = 36;
+int GoldCoins = 30;
+int turn = 0;
 
 void initializeCharacterArray(void){
 	for(int i = 0; i < NUMBEROFCHARACTERS; i++){
@@ -26,19 +35,6 @@ int diceRoll(void){
 
 
 int main(void){
-	//Global Variables
-
-	const int MAXNUMBEROFPLAYERS = 6;
-	int numberOfPlayers;
-	int numberOfPlayersAlive = 0;
-	int SmallStrengthCounters = 32;
-	int BigStrengthCounters = 8;
-	int SmallCraftCounters = 32;
-	int BigCraftCounters = 8;
-	int LivesCounters = 40;
-	int FateCounters = 36;
-	int GoldCoins = 30;
-	int turn = 0;
 	
 	cout<<"/////////////////////////////////////////////\n"
 		<<"////-------------------------------------////\n"

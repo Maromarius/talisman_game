@@ -8,11 +8,13 @@ using namespace std;
 
 class Area
 {
+public:
+
 	string areaName;
 	Area* left;
 	Area* right;
 	//vector <AdventureCard> adventurCards;
-	void effect()
+	void effect();
 
 	Area();
 	Area(string);

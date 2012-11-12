@@ -120,10 +120,10 @@
     <ClInclude Include="Player.h">
       <Filter>Header Files\Player</Filter>
     </ClInclude>
-    <ClInclude Include="Wizard.h">
+    <ClInclude Include="Assassin.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
-    <ClInclude Include="Assassin.h">
+    <ClInclude Include="Wizard.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
     <ClInclude Include="Dwarf.h">
@@ -209,10 +209,10 @@
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Wizard.cpp">
+    <ClCompile Include="Assassin.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
-    <ClCompile Include="Assassin.cpp">
+    <ClCompile Include="Wizard.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
     <ClCompile Include="Dwarf.cpp">

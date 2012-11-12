@@ -1,4 +1,5 @@
 #include "Area.h"
+using namespace std;
 
 Area::Area()
 {

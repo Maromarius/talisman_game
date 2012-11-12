@@ -1,7 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <iostream>
-#include "Map.h"
 #include "Character.h"
 using namespace std;
 
@@ -14,10 +13,10 @@ class Player
 		static const int NUMBEROFCHARACTERS = 14;
 
 	public:
-		Player(void);
+		Player::Player(void);
 		Player::Player(int[]);
-		~Player(void);
-		Character createCharacter(int);
-		Character getCharacter(void);
+		Player::~Player(void);
+		Character Player::createCharacter(int);
+		Character Player::getCharacter(void);
 };
 #endif

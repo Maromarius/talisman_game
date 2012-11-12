@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Character.h"
 
 #include "Assassin.h"
 #include "Druid.h"
@@ -17,6 +18,7 @@
 
 #include <cstdlib>
 #include <ctime>
+
 
 Character character;
 

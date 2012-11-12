@@ -1,5 +1,7 @@
 #include "Character.h"
 
+Character::Character(){}
+
 Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _baseFate, 
 					int _numOfSpells, string _location, string _alignment, string profession)
 {

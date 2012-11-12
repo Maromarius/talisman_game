@@ -55,9 +55,9 @@ protected: //TO CHANGE!!!
 
 
 public:
-	Character(void);
-	Character(int, int, int, int, int, string, string,string);
-	~Character(void);
+	Character::Character(void);
+	Character::Character(int, int, int, int, int, string, string,string);
+	Character::~Character(void);
 	void gainStrength(int);
     void loseStrength(int);
     void gainCraft(int);

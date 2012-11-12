@@ -11,10 +11,22 @@ Area::Area()
 	right = NULL;
 }
 
+Area::Area(string name)
+{
+	areaName=name;
+	areaDescription="";
+	left = NULL;
+	right = NULL;
+}
+
 Area::Area(string name, string description)
 {
 	areaName=name;
 	areaDescription=description;
 	left = NULL;
 	right = NULL;
+}
+
+Area::~Area()
+{
 }

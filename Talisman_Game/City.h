@@ -3,16 +3,16 @@
 #include <string>
 #include "Area.h"
 
+
 using namespace std;
  
 class City : public Area
 {
-protected:
+public:
 	
     static const string NAME ;
     static const string DESCRIPTION;
 
-public:
     City();
     ~City();
 };

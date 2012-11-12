@@ -15,7 +15,7 @@ class Player
 
 	public:
 		Player(void);
-		Player::Player(int[])
+		Player::Player(int[]);
 		~Player(void);
 		Character createCharacter(int);
 		Character getCharacter(void);

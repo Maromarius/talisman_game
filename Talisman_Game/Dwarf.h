@@ -22,8 +22,8 @@ protected:
 	static const string PROFESSION;
 
 public:
-    Drawf();
-    ~Drawf();
+    Dwarf();
+    ~Dwarf();
 };
 
 #endif

@@ -21,14 +21,14 @@
 Character character;
 
 Player::Player(){
-	character = createCharacter();
+	//character = createCharacter();
 }
 
 Player::Player(int isInPlay[]){
 	// Roll for a random character 
 		int characterRoll;
 		while(true){
-			srand(time(0));
+			srand((unsigned int)time(0));
 			characterRoll = rand() % NUMBEROFCHARACTERS;
 			if(isInPlay[characterRoll] == 0){
 				isInPlay[characterRoll] = 1;

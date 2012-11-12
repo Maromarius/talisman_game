@@ -1,39 +1,19 @@
-﻿Build started 11/11/2012 7:45:09 PM.
-     1>Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (build target(s)).
+﻿Build started 11/11/2012 7:51:32 PM.
+     1>Project "C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\Talisman_Game.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\Talisman_Game.unsuccessfulbuild".
        ClCompile:
-         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Area.cpp Armor.cpp Armour.cpp Axe.cpp BattleHulk.cpp Bear.cpp Character.cpp Druid.cpp Enemy.cpp Helmet.cpp main.cpp Map.cpp Object.cpp Player.cpp Region.cpp Sword.cpp Warrior.cpp Weapon.cpp
-         Weapon.cpp
-         Warrior.cpp
-         Sword.cpp
-         Region.cpp
-         Player.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\player.cpp(4): error C2512: 'Area' : no appropriate default constructor available
-         Object.cpp
-         Map.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Dwarf.cpp Player.cpp main.cpp
          main.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\main.cpp(52): error C2248: 'Character::currentLocation' : cannot access protected member declared in class 'Character'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\character.h(43) : see declaration of 'Character::currentLocation'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\character.h(11) : see declaration of 'Character'
-         Helmet.cpp
-         Enemy.cpp
-         Druid.cpp
-         Character.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\character.cpp(257): warning C4018: '<' : signed/unsigned mismatch
-         Bear.cpp
-         BattleHulk.cpp
-         Axe.cpp
-         Armour.cpp
-         Armor.cpp
-         Area.cpp
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
-     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.cpp(4): error C2511: 'Area::Area(void)' : overloaded member function not found in 'Area'
-                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
+     1>c:\users\arnaud\desktop\talisman_game.git\trunk\talisman_game\main.cpp(52): error C2248: 'Character::currentLocation' : cannot access protected member declared in class 'Character'
+                 c:\users\arnaud\desktop\talisman_game.git\trunk\talisman_game\character.h(43) : see declaration of 'Character::currentLocation'
+                 c:\users\arnaud\desktop\talisman_game.git\trunk\talisman_game\character.h(11) : see declaration of 'Character'
+         Player.cpp
+     1>c:\users\arnaud\desktop\talisman_game.git\trunk\talisman_game\player.cpp(4): error C2512: 'Area' : no appropriate default constructor available
+         Dwarf.cpp
          Generating Code...
-     1>Done Building Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" (build target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:16.69
+Time Elapsed 00:00:01.00

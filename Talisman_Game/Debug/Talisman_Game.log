@@ -1,35 +1,39 @@
-﻿Build started 11/11/2012 6:22:29 PM.
-     1>Project "C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (build target(s)).
+﻿Build started 11/11/2012 7:45:09 PM.
+     1>Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Talisman_Game.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Area.cpp Armor.cpp Armour.cpp Axe.cpp BattleHulk.cpp Bear.cpp Character.cpp Druid.cpp Enemy.cpp Helmet.cpp main.cpp Map.cpp Object.cpp Player.cpp Region.cpp Sword.cpp Warrior.cpp Weapon.cpp
+         Weapon.cpp
+         Warrior.cpp
+         Sword.cpp
+         Region.cpp
+         Player.cpp
+     1>c:\users\deven\documents\projectall\trunk\talisman_game\player.cpp(4): error C2512: 'Area' : no appropriate default constructor available
+         Object.cpp
+         Map.cpp
          main.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Talisman_Game.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.lib" /MACHINE:X86 Debug\Armor.obj
-         Debug\Armour.obj
-         Debug\Axe.obj
-         Debug\Bear.obj
-         Debug\Character.obj
-         Debug\Druid.obj
-         Debug\Enemy.obj
-         Debug\Helmet.obj
-         Debug\main.obj
-         Debug\Map.obj
-         Debug\Object.obj
-         Debug\Region.obj
-         Debug\Sword.obj
-         Debug\Warrior.obj
-         Debug\Weapon.obj
-         LINK : C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe not found or not built by the last incremental link; performing full link
-         Talisman_Game.vcxproj -> C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe;#1" /manifest Debug\Talisman_Game.exe.intermediate.manifest
-       FinalizeBuildStatus:
-         Deleting file "Debug\Talisman_Game.unsuccessfulbuild".
-         Touching "Debug\Talisman_Game.lastbuildstate".
-     1>Done Building Project "C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" (build target(s)).
+     1>c:\users\deven\documents\projectall\trunk\talisman_game\main.cpp(52): error C2248: 'Character::currentLocation' : cannot access protected member declared in class 'Character'
+                 c:\users\deven\documents\projectall\trunk\talisman_game\character.h(43) : see declaration of 'Character::currentLocation'
+                 c:\users\deven\documents\projectall\trunk\talisman_game\character.h(11) : see declaration of 'Character'
+         Helmet.cpp
+         Enemy.cpp
+         Druid.cpp
+         Character.cpp
+     1>c:\users\deven\documents\projectall\trunk\talisman_game\character.cpp(257): warning C4018: '<' : signed/unsigned mismatch
+         Bear.cpp
+         BattleHulk.cpp
+         Axe.cpp
+         Armour.cpp
+         Armor.cpp
+         Area.cpp
+     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C3646: 'Area' : unknown override specifier
+     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.h(17): error C2091: function returns function
+     1>c:\users\deven\documents\projectall\trunk\talisman_game\area.cpp(4): error C2511: 'Area::Area(void)' : overloaded member function not found in 'Area'
+                 c:\users\deven\documents\projectall\trunk\talisman_game\area.h(10) : see declaration of 'Area'
+         Generating Code...
+     1>Done Building Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.70
+Time Elapsed 00:00:16.69

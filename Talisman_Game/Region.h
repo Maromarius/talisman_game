@@ -3,16 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "Area.h"
 using namespace std;
 
-struct Area
-	{
-		string data;
-		Area* left;
-		Area* right;
-
-		Area(string data) : data(data), left(NULL), right(NULL) {}
-	};
 
 class Region
 {	

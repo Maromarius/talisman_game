@@ -60,6 +60,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Area.h" />
     <ClInclude Include="Armor.h" />
     <ClInclude Include="Armour.h" />
     <ClInclude Include="Axe.h" />
@@ -78,6 +79,7 @@
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Area.cpp" />
     <ClCompile Include="Armor.cpp" />
     <ClCompile Include="Armour.cpp" />
     <ClCompile Include="Axe.cpp" />

@@ -67,6 +67,12 @@
     <Filter Include="Source Files\Player">
       <UniqueIdentifier>{09d107d3-728e-4fa7-a654-3f609c03dcfd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Areas">
+      <UniqueIdentifier>{e677999b-f9bc-4a84-adca-59b18855236f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Areas">
+      <UniqueIdentifier>{d6bfb3e1-30df-48c4-a8a0-bb2d6d8a8d0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Warrior.h">
@@ -224,6 +230,9 @@
     <ClCompile Include="Ghoul.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
     <ClCompile Include="Ministrel.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
@@ -244,9 +253,6 @@
     </ClCompile>
     <ClCompile Include="Troll.cpp">
       <Filter>Source Files\Character</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -8,16 +8,17 @@ using namespace std;
 
 class Area
 {
-public:
+protected:
 
 	string areaName;
+	string areaDescription;
 	Area* left;
 	Area* right;
 	//vector <AdventureCard> adventurCards;
+public:
 	void effect();
-
 	Area();
-	Area(string);
+	Area(string,string);
 	~Area();
 };
 #endif

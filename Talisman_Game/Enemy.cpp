@@ -14,13 +14,7 @@ Enemy::Enemy(string name, string description,string type,int encounterNumber,int
 	this->strength = strength;
 }
 
-Enemy::~Enemy()
-{
-	type = "";
-	name = "";
-	description= "";
-	encounterNumber = 0;
-}
+Enemy::~Enemy(){}
 
 string Enemy::getName(){
 

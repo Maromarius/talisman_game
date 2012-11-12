@@ -12,6 +12,8 @@ class Character
 {
 
 protected: //TO CHANGE!!!
+
+
 	//Character Stats
 	int baseStrength;		// Base Strength (on Character Card)
 	

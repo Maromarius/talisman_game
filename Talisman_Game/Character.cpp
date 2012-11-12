@@ -1,5 +1,9 @@
 #include "Character.h"
 
+/*const string Character::LOCATION = "";
+const string Character::ALIGNMENT = "";
+const string Character::PROFESSION = "";*/
+
 Character::Character(){}
 
 Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _baseFate, 

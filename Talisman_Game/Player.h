@@ -18,5 +18,7 @@ class Player
 		Player::~Player(void);
 		Character Player::createCharacter(int);
 		Character Player::getCharacter(void);
+		bool Player::checkIfPermaDead(void);
+		void Player::isNowPermaDead(void);
 };
 #endif

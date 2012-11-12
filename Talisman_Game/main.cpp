@@ -43,30 +43,39 @@ int main(void){
 		<<"/////////////////////////////////////////////\n"<<endl;
 	
 	// Board Setup
-	Map* TalismanMap = new Map();
+	//Map* TalismanMap = new Map();
 
 	// Character Setup
-	cout<<"How many players will be playing this game?"<<endl;	
-	cin>>numberOfPlayers;
-	numberOfPlayersAlive = numberOfPlayers;
-	Player *players[MAXNUMBEROFPLAYERS];
+		cout<<"How many players will be playing this game?"<<endl;	
+		cin>>numberOfPlayers;
+		numberOfPlayersAlive = numberOfPlayers;
+		Player *players = new Player[numberOfPlayers];
 	
 	// Create players, assign characters to players, and update which characters are in play
-	initializeCharacterArray();
-	for (int i=0; i<numberOfPlayers; i++){
-		players[i] = new Player(isInPlay);		
-	}
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		initializeCharacterArray();
+		for (int i=0; i<numberOfPlayers; i++){
+			cout << "Creating Player " << i << endl;
+			new (&players[i]) Player(isInPlay);
+		}	
+
+	// Game start. Here is the big WHILE loop.
+		int i = 0;
+		//while(numberOfPlayersAlive > 1){
+		while(i < 10){
+			if(players[turn].checkIfPermaDead() == false){
+				cout << "It is currently Player " << turn << "'s turn!" << endl;
+				cout << players[turn].getCharacter().getProfession() << ", please roll the die." << endl << endl;
+			}
+
+			i++;
+			turn++;
+			if(turn == 6)
+				turn = 0;
+		}	
+
+
+			//break;
+		//}
 	
 	/*
 	Object *a1 = new Axe();

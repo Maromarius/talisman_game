@@ -2,23 +2,6 @@
 #include "Player.h"
 #include "Character.h"
 
-// include ALL the characters!
-#include "Assassin.h"
-#include "Druid.h"
-#include "Dwarf.h"
-#include "Elf.h"
-#include "Ghoul.h"
-#include "Ministrel.h"
-#include "Monk.h"
-#include "Priest.h"
-#include "Prophetess.h"
-#include "Sorceress.h"
-#include "Thief.h"
-#include "Troll.h"
-#include "Warrior.h"
-#include "Wizard.h"
-
-
 #include "Object.h"
 
 #include <iostream>
@@ -29,7 +12,6 @@ using namespace std;
 
 const int NUMBEROFCHARACTERS = 14;
 int isInPlay[NUMBEROFCHARACTERS];
-bool initialized = false;
 
 void initializeCharacterArray(void){
 	for(int i = 0; i < NUMBEROFCHARACTERS; i++){
@@ -37,70 +19,11 @@ void initializeCharacterArray(void){
 	}
 }
 
-Character createCharacter(void){
-	// Roll for a random character 
-		int characterRoll;
-		while(true){
-			srand(time(0));
-			characterRoll = rand() % NUMBEROFCHARACTERS;
-			if(isInPlay[characterRoll] == 0)
-				break;
-		}
-	
-	// Create & return the character
-		Character *character;
-		
-		switch(characterRoll){
-			case 0:
-				character = new Assassin();
-				isInPlay[0] = 1;
-			case 1:
-				character = new Druid();
-				isInPlay[1] = 1;
-			case 2:
-				character = new Dwarf();
-				isInPlay[2] = 1;
-			case 3:
-				character = new Elf();
-				isInPlay[3] = 1;
-			case 4:
-				character = new Ghoul();
-				isInPlay[4] = 1;
-			case 5:
-				character = new Ministrel();
-				isInPlay[5] = 1;
-			case 6:
-				character = new Monk();
-				isInPlay[6] = 1;
-			case 7:
-				character = new Priest();
-				isInPlay[7] = 1;
-			case 8:
-				character = new Prophetess();
-				isInPlay[8] = 1;
-			case 9:
-				character = new Sorceress();
-				isInPlay[9] = 1;
-			case 10:
-				character = new Thief();
-				isInPlay[10] = 1;
-			case 11:
-				character = new Troll();
-				isInPlay[11] = 1;
-			case 12:
-				character = new Warrior();
-				isInPlay[12] = 1;
-			case 13:
-				character = new Wizard();
-				isInPlay[13] = 1;
-		}
 
-		return *character;
-
-}
 
 int main(void){
 	//Global Variables
+
 	const int MAXNUMBEROFPLAYERS = 6;
 	int numberOfPlayers;
 	int numberOfPlayersAlive = 0;
@@ -128,30 +51,12 @@ int main(void){
 	numberOfPlayersAlive = numberOfPlayers;
 	Player *players[MAXNUMBEROFPLAYERS];
 	
-	// Assign characters to players
+	// Create players, assign characters to players, and update which characters are in play
 	initializeCharacterArray();
 	for (int i=0; i<numberOfPlayers; i++){
-
-		players[i] = new Player();
-
-		//players[i].setCharacter(createCharacter());
-		//players[i]->currentSpace = TalismanMap->OutterRegion.getArea(Players[i]->getSpawnPoint());
+		players[i] = new Player(isInPlay);		
 	}
 		
-	//Game Loop (add spawning boolean)
-		
-		/*
-	while (numberOfPlayersAlive!=1)
-	{
-	
-
-	while(){
-		if(Players[i] == '\0')
-			turn++;
-		else if(turn == numberOfPlayers)
-			turn = 0;
-	}
-	*/
 	
 	
 	

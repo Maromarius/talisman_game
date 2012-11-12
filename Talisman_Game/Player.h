@@ -9,12 +9,15 @@ class Player
 {
 	protected:
 		Character character;
-		Area currentArea;
+		//Area currentArea;
 		bool isPermaDead;
+		static const int NUMBEROFCHARACTERS = 14;
 
 	public:
 		Player(void);
+		Player::Player(int[])
 		~Player(void);
-		Character createCharacter();
+		Character createCharacter(int);
+		Character getCharacter(void);
 };
 #endif

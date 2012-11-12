@@ -1,13 +1,7 @@
 #include "Character.h"
-#include <iostream>
-#include <vector>
-#include "Object.h"
-
-using namespace std;
-
 
 Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _baseFate, 
-					int _numOfSpells, string _location, string _alignment, string _profession)
+					int _numOfSpells, string _location, string _alignment, string profession)
 {
 	counterStrength = 0;
     counterCraft = 0;
@@ -17,7 +11,7 @@ Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _base
 	maxObjects = 4;
 	numToadTurnsLeft = 0;
 
-	profession = _profession;
+	this->profession = profession;
 
     hasMule = false;
     isToad = false;
@@ -36,7 +30,7 @@ Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _base
     baseFate = _baseFate;
 	currentFate = _baseFate;
     numOfSpells = _numOfSpells;
-    startinglocation = _location;
+    spawnPoint = _location;
     alignment = _alignment;
 }
 
@@ -54,7 +48,7 @@ Character::~Character(void)
     currentFate = 0;
     trophies = 0;
     numOfSpells = 0;
-    startinglocation = "";
+    spawnPoint = "";
     alignment = "";
 	profession = "";
     hasMule = 0;
@@ -209,6 +203,11 @@ void Character::loseGold(int _gold){
 string Character::getProfession(){
 
 	return this->profession;
+}
+
+string Character::getSpawnPoint()
+{
+	return this->spawnPoint;
 }
 
 int Character::getLife(){

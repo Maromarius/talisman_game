@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class  Character
+class Character
 {
 
 protected: //TO CHANGE!!!
@@ -39,7 +39,9 @@ protected: //TO CHANGE!!!
 	bool isToad;			// Is the character currently inflicted with Toad status?
 	int numToadTurnsLeft;	// How many turns does the character have left of being a Toad?
 	
-	string startinglocation;
+	string spawnPoint;
+	Area* currentLocation;
+
 	string alignment;
 	string profession;
 
@@ -73,6 +75,7 @@ public:
 	void addObject(Object);
 	//void removeObject(Object);
 	string getProfession();
+	string getSpawnPoint();
 	int getLife();
 	int getBaseLife();
 	int getStrength();

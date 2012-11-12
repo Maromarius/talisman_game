@@ -1,3 +1,4 @@
+#include "Map.h"
 #include "Character.h"
 #include "Druid.h"
 #include "Warrior.h"
@@ -8,9 +9,6 @@
 #include "Sword.h"
 #include "Helmet.h"
 #include "Armour.h"
-#include "Map.h"
-#include "Region.h"
-#include "Bear.h"
 
 #include <iostream>
 
@@ -19,9 +17,66 @@ using namespace std;
 
 
 int main(void){
+	//Global Variables
+	const int MAXNUMBEROFPLAYERS = 6;
+	int numberOfPlayersAlive = 0;
+	int SmallStrengthCounters = 32;
+	int BigStrengthCounters = 8;
+	int SmallCraftCounters = 32;
+	int BigCraftCounters = 8;
+	int LivesCounters = 40;
+	int FateCounters = 36;
+	int GoldCoins = 30;
+	
+	cout<<"/////////////////////////////////////////////\n"
+		<<"////-------------------------------------////\n"
+		<<"////--WELCOME TO THE WORLD OF TalisMAN!--////\n" 
+		<<"////-------------------------------------////\n"
+		<<"/////////////////////////////////////////////\n"<<endl;
+	
+	//Board Setup
+	Map* TalismanMap = new Map();
 
-	Map *talismanMap = new Map();
+	//Chracter Setup
+	int numberOfPlayers;
+	Character *Players[MAXNUMBEROFPLAYERS]; 
+	cout<<"How many players will be playing this game?"<<endl;
+	//needs to be get idiot proofed
+	cin>>numberOfPlayers;
+	numberOfPlayersAlive = numberOfPlayers;
+		//Randomly Selecting Player's Characters and setting them on the Map
+		for (int i=0; i<numberOfPlayers; i++)
+		{
+			//Random Selection 
 
+			Players[i]->currentLocation = TalismanMap->OutterRegion.getArea(Players[i]->getSpawnPoint());
+		}
+		
+	//Game Loop (add spawning boolean)
+	//turn =0;
+	/*
+	while (numberOfPlayersAlive!=1)
+	{
+	
+
+	if(Players[i] == **NULL**)
+		turn++;
+	else if(turn == numberOfPlayers)
+		turn = 0;
+	}
+	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	Object *a1 = new Axe();
 	Object *s1 = new Sword();
 	Object *h1 = new Helmet();
@@ -30,11 +85,6 @@ int main(void){
 	Character *w1 = new Warrior();
 	Character *d1 = new Druid();
 	
-	Enemy *b1 = new Bear();
-	
-	cout<<"A new Enemy: "<<b1->getName()<<endl;
-	cout<<"Description: "<<b1->getDescription()<<endl;
-	cout << endl;
 	
 	cout << "Warrior has been created." << endl;
 	cout << w1->getProfession() << "'s stats are as follows:" << endl;
@@ -69,13 +119,11 @@ int main(void){
 
 	cout << d1->getProfession() << " Inventory (size:"<< d1->getBag().size() << "/"<< d1->getMaxObjectSize()<<"):"<< endl;
 	cout << d1->showBag() << endl;
-
-
-
-
-
-	system("PAUSE");
+	
 	delete w1;
 	delete d1;
+	*/
+	
+	system("PAUSE");
 	return 0;
 }

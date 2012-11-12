@@ -3,23 +3,91 @@
 #include "Character.h"
 #include "Druid.h"
 #include "Warrior.h"
-#include "Armor.h"
-#include "Axe.h"
-#include "Weapon.h"
 #include "Object.h"
-#include "Sword.h"
-#include "Helmet.h"
-#include "Armour.h"
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
+const int NUMBEROFCHARACTERS = 14;
+int isInPlay[NUMBEROFCHARACTERS];
+bool initialized = false;
 
+void initializeCharacterArray(void){
+	for(int i = 0; i < NUMBEROFCHARACTERS; i++){
+		isInPlay[i] = 0;
+	}
+}
+
+Character createCharacter(void){
+	// Roll for a random character 
+		int characterRoll;
+		while(true){
+			srand(time(0));
+			characterRoll = rand() % NUMBEROFCHARACTERS;
+			if(isInPlay[characterRoll] == 0)
+				break;
+		}
+	
+	// Create & return the character
+		Character *character;
+
+		// TODO: Change this for actual classes
+		switch(characterRoll){
+			case 0:
+				character = new Warrior();
+				isInPlay[0] = 1;
+			case 1:
+				character = new Druid();
+				isInPlay[1] = 1;
+			case 2:
+				character = new Warrior();
+				isInPlay[2] = 1;
+			case 3:
+				character = new Warrior();
+				isInPlay[3] = 1;
+			case 4:
+				character = new Warrior();
+				isInPlay[4] = 1;
+			case 5:
+				character = new Warrior();
+				isInPlay[5] = 1;
+			case 6:
+				character = new Warrior();
+				isInPlay[6] = 1;
+			case 7:
+				character = new Warrior();
+				isInPlay[7] = 1;
+			case 8:
+				character = new Warrior();
+				isInPlay[8] = 1;
+			case 9:
+				character = new Warrior();
+				isInPlay[9] = 1;
+			case 10:
+				character = new Warrior();
+				isInPlay[10] = 1;
+			case 11:
+				character = new Warrior();
+				isInPlay[11] = 1;
+			case 12:
+				character = new Warrior();
+				isInPlay[12] = 1;
+			case 13:
+				character = new Warrior();
+				isInPlay[13] = 1;
+		}
+
+		return *character;
+
+}
 
 int main(void){
 	//Global Variables
 	const int MAXNUMBEROFPLAYERS = 6;
+	int numberOfPlayers;
 	int numberOfPlayersAlive = 0;
 	int SmallStrengthCounters = 32;
 	int BigStrengthCounters = 8;
@@ -28,42 +96,43 @@ int main(void){
 	int LivesCounters = 40;
 	int FateCounters = 36;
 	int GoldCoins = 30;
+	int turn = 0;
 	
 	cout<<"/////////////////////////////////////////////\n"
 		<<"////-------------------------------------////\n"
-		<<"////--WELCOME TO THE WORLD OF TalisMAN!--////\n" 
+		<<"////--WELCOME TO THE WORLD OF TALISMAN!--////\n" 
 		<<"////-------------------------------------////\n"
 		<<"/////////////////////////////////////////////\n"<<endl;
 	
-	//Board Setup
+	// Board Setup
 	Map* TalismanMap = new Map();
 
-	//Chracter Setup
-	int numberOfPlayers;
-	Player *Players[MAXNUMBEROFPLAYERS]; 
-	cout<<"How many players will be playing this game?"<<endl;
-	//needs to be get idiot proofed
+	// Character Setup
+	cout<<"How many players will be playing this game?"<<endl;	
 	cin>>numberOfPlayers;
 	numberOfPlayersAlive = numberOfPlayers;
-		//Randomly Selecting Player's Characters and setting them on the Map
-		for (int i=0; i<numberOfPlayers; i++)
-		{
-			//Random Selection 
-
-			Players[i]->currentArea = TalismanMap->OutterRegion.getArea(Players[i]->character->getSpawnPoint());
-		}
+	Player *players[MAXNUMBEROFPLAYERS];
+	
+	// Assign characters to players
+	initializeCharacterArray();
+	for (int i=0; i<numberOfPlayers; i++)
+	{
+		players[i].setCharacter(createCharacter());
+		players[i]->currentSpace = TalismanMap->OutterRegion.getArea(Players[i]->getSpawnPoint());
+	}
 		
 	//Game Loop (add spawning boolean)
-	//turn =0;
-	/*
+		
+		/*
 	while (numberOfPlayersAlive!=1)
 	{
 	
 
-	if(Players[i] == **NULL**)
-		turn++;
-	else if(turn == numberOfPlayers)
-		turn = 0;
+	while(){
+		if(Players[i] == '\0')
+			turn++;
+		else if(turn == numberOfPlayers)
+			turn = 0;
 	}
 	*/
 	

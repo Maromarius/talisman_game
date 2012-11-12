@@ -1,5 +1,6 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
+
 #include <iostream>
 #include <vector>
 #include "Object.h"
@@ -13,6 +14,7 @@ class Character
 protected: //TO CHANGE!!!
 	//Character Stats
 	int baseStrength;		// Base Strength (on Character Card)
+	
 	int counterStrength;	// How many Strength counters have been obtained
 	
 	int baseCraft;			// Base Craft (on Character Card)

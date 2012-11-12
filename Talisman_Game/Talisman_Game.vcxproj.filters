@@ -162,6 +162,9 @@
     <ClInclude Include="Troll.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
+    <ClInclude Include="City.h">
+      <Filter>Header Files\Areas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp">
@@ -253,6 +256,9 @@
     </ClCompile>
     <ClCompile Include="Troll.cpp">
       <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="City.cpp">
+      <Filter>Source Files\Areas</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

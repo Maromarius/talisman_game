@@ -353,5 +353,50 @@
     <ClCompile Include="City.cpp">
       <Filter>Source Files\Areas</Filter>
     </ClCompile>
+    <ClCompile Include="BlackKnight.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Castle.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapel.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Chasm.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Crags.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Crypt.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="CursedGlade.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Desert.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="DiceWithHeart.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Forest.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Graveyard.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="HiddenValley.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Hills.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Mines.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

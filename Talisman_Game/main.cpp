@@ -50,7 +50,7 @@ int main(void){
 	//Map* TalismanMap = new Map();
 
 	// Character Setup
-		cout<<"How many players will be playing this game?"<<endl;	
+		cout<<"How many players will be playing this game? (PUT 6 OR IT WILL CRASH. TESTING PURPOSES.)"<<endl;	
 		cin>>numberOfPlayers;
 		numberOfPlayersAlive = numberOfPlayers;
 		Player *players = new Player[numberOfPlayers];
@@ -71,7 +71,6 @@ int main(void){
 				cout << players[turn].getCharacter().getProfession() << ", please press any key to roll the die." << endl;
 				system("PAUSE");
 				cout << "You have rolled a " << diceRoll() << "!" << endl;
-
 			}
 
 			i++;

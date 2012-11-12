@@ -19,6 +19,10 @@ void initializeCharacterArray(void){
 	}
 }
 
+int diceRoll(void){
+	srand((unsigned int)time(0));
+	return rand() % 6 + 1;
+}
 
 
 int main(void){
@@ -63,8 +67,11 @@ int main(void){
 		//while(numberOfPlayersAlive > 1){
 		while(i < 10){
 			if(players[turn].checkIfPermaDead() == false){
-				cout << "It is currently Player " << turn << "'s turn!" << endl;
-				cout << players[turn].getCharacter().getProfession() << ", please roll the die." << endl << endl;
+				cout << "\nIt is currently Player " << turn << "'s turn!" << endl;
+				cout << players[turn].getCharacter().getProfession() << ", please press any key to roll the die." << endl;
+				system("PAUSE");
+				cout << "You have rolled a " << diceRoll() << "!" << endl;
+
 			}
 
 			i++;

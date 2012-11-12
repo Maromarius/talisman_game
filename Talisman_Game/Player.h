@@ -1,7 +1,27 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <iostream>
+
+#include "Player.h"
 #include "Character.h"
+
+#include "Assassin.h"
+#include "Druid.h"
+#include "Dwarf.h"
+#include "Elf.h"
+#include "Ghoul.h"
+#include "Ministrel.h"
+#include "Monk.h"
+#include "Priest.h"
+#include "Prophetess.h"
+#include "Sorceress.h"
+#include "Thief.h"
+#include "Troll.h"
+#include "Warrior.h"
+#include "Wizard.h"
+
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 class Player

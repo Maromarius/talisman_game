@@ -224,9 +224,6 @@
     <ClCompile Include="Ghoul.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files\Character</Filter>
-    </ClCompile>
     <ClCompile Include="Ministrel.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
@@ -247,6 +244,9 @@
     </ClCompile>
     <ClCompile Include="Troll.cpp">
       <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

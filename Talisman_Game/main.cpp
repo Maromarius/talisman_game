@@ -2,15 +2,21 @@
 #include "Player.h"
 #include "Character.h"
 
+// include ALL the characters!
 #include "Assassin.h"
 #include "Druid.h"
+#include "Dwarf.h"
 #include "Elf.h"
 #include "Ghoul.h"
 #include "Ministrel.h"
 #include "Monk.h"
 #include "Priest.h"
 #include "Prophetess.h"
+#include "Sorceress.h"
+#include "Thief.h"
+#include "Troll.h"
 #include "Warrior.h"
+#include "Wizard.h"
 
 
 #include "Object.h"
@@ -43,8 +49,7 @@ Character createCharacter(void){
 	
 	// Create & return the character
 		Character *character;
-
-		// TODO: Change this for actual classes
+		
 		switch(characterRoll){
 			case 0:
 				character = new Assassin();
@@ -53,40 +58,40 @@ Character createCharacter(void){
 				character = new Druid();
 				isInPlay[1] = 1;
 			case 2:
-				character = new Warrior();
+				character = new Dwarf();
 				isInPlay[2] = 1;
 			case 3:
-				character = new Warrior();
+				character = new Elf();
 				isInPlay[3] = 1;
 			case 4:
-				character = new Warrior();
+				character = new Ghoul();
 				isInPlay[4] = 1;
 			case 5:
-				character = new Warrior();
+				character = new Ministrel();
 				isInPlay[5] = 1;
 			case 6:
-				character = new Warrior();
+				character = new Monk();
 				isInPlay[6] = 1;
 			case 7:
-				character = new Warrior();
+				character = new Priest();
 				isInPlay[7] = 1;
 			case 8:
-				character = new Warrior();
+				character = new Prophetess();
 				isInPlay[8] = 1;
 			case 9:
-				character = new Warrior();
+				character = new Sorceress();
 				isInPlay[9] = 1;
 			case 10:
-				character = new Warrior();
+				character = new Thief();
 				isInPlay[10] = 1;
 			case 11:
-				character = new Warrior();
+				character = new Troll();
 				isInPlay[11] = 1;
 			case 12:
 				character = new Warrior();
 				isInPlay[12] = 1;
 			case 13:
-				character = new Warrior();
+				character = new Wizard();
 				isInPlay[13] = 1;
 		}
 
@@ -125,10 +130,12 @@ int main(void){
 	
 	// Assign characters to players
 	initializeCharacterArray();
-	for (int i=0; i<numberOfPlayers; i++)
-	{
-		players[i].setCharacter(createCharacter());
-		players[i]->currentSpace = TalismanMap->OutterRegion.getArea(Players[i]->getSpawnPoint());
+	for (int i=0; i<numberOfPlayers; i++){
+
+		players[i] = new Player();
+
+		//players[i].setCharacter(createCharacter());
+		//players[i]->currentSpace = TalismanMap->OutterRegion.getArea(Players[i]->getSpawnPoint());
 	}
 		
 	//Game Loop (add spawning boolean)

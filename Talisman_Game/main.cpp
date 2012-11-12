@@ -1,8 +1,18 @@
 #include "Map.h"
 #include "Player.h"
 #include "Character.h"
+
+#include "Assassin.h"
 #include "Druid.h"
+#include "Elf.h"
+#include "Ghoul.h"
+#include "Ministrel.h"
+#include "Monk.h"
+#include "Priest.h"
+#include "Prophetess.h"
 #include "Warrior.h"
+
+
 #include "Object.h"
 
 #include <iostream>
@@ -37,7 +47,7 @@ Character createCharacter(void){
 		// TODO: Change this for actual classes
 		switch(characterRoll){
 			case 0:
-				character = new Warrior();
+				character = new Assassin();
 				isInPlay[0] = 1;
 			case 1:
 				character = new Druid();

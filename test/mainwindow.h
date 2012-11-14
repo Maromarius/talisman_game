@@ -17,8 +17,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     void whichSpace(Space*, Space*);
     ~MainWindow();
+       Space *spaces[49];
     int temptemptemp;
-public slots:   void LoadCharacter();
+public slots:
+    void LoadCharacter();
+    void UpdateBoard();
     
 private slots:
     void on_dice_clicked();

@@ -32,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this,SLOT(LoadCharacter()));
+    QObject::connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(UpdateBoard()));
     scene = new QGraphicsScene(this);
 
     ui->graphicsView->setScene(scene);
@@ -42,7 +43,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // CREATE THE GAME BOARD
     int currentNumSpaces = 0;
-    Space *spaces[49];
     int squareSize = 80;
     int sqRowNumbers [4] = {7, 5, 3, 1};
     int numSquares[4] = {24, 16, 8, 1};
@@ -58,7 +58,12 @@ MainWindow::MainWindow(QWidget *parent) :
         for(int i = 0; i < numSquares[j]; i++){
 
             if(j == 0)
-                spaces[currentNumSpaces] = new OuterRegionSpace(squareSize * squareXMultiplier, squareSize * squareYMultiplier);
+                if(i == 0){
+                     spaces[currentNumSpaces] = new OuterRegionSpace(squareSize * squareXMultiplier, squareSize * squareYMultiplier);
+                     spaces[currentNumSpaces]->isHere = true;
+                }
+                else
+                     spaces[currentNumSpaces] = new OuterRegionSpace(squareSize * squareXMultiplier, squareSize * squareYMultiplier);
             else if(j == 1)
                 spaces[currentNumSpaces] = new MiddleRegionSpace(squareSize * squareXMultiplier, squareSize * squareYMultiplier);
             else
@@ -98,7 +103,12 @@ MainWindow::MainWindow(QWidget *parent) :
         modifier++;
     }
 
-    // Keep going here
+
+
+
+
+
+
 
 }
 
@@ -146,8 +156,9 @@ void MainWindow::LoadCharacter()
     QPixmap Druid = QPixmap(":/image/images/Druid.png");
 
     QPixmap Dwarf = QPixmap(":/image/images/Dwarf.png");
-    /*
+
     QPixmap Elf = QPixmap(":/image/images/Elf.png");
+    /*
     QPixmap Ghoul = QPixmap(":/image/images/Ghoul.png");
     QPixmap Ministrel = QPixmap(":/image/images/Ministrel.png");
     QPixmap Monk = QPixmap(":/image/images/Monk.png");
@@ -171,11 +182,13 @@ void MainWindow::LoadCharacter()
         break;
 
     case 3 :ui->characterCardLabel->setPixmap(Dwarf.scaled(341,191,Qt::KeepAspectRatio));
+        temptemptemp++;
+        break;
+
+    case 4 :ui->characterCardLabel->setPixmap(Elf.scaled(341,191,Qt::KeepAspectRatio));
         temptemptemp = 1;
         break;
         /*
-    case 4 :ui->characterCardLabel->setPixmap(Elf.scaled(341,191,Qt::KeepAspectRatio));
-        break;
     case 5 :ui->characterCardLabel->setPixmap(Ghoul.scaled(341,191,Qt::KeepAspectRatio));
         break;
     case 6 :ui->characterCardLabel->setPixmap(Ministrel.scaled(341,191,Qt::KeepAspectRatio));
@@ -203,3 +216,7 @@ void MainWindow::LoadCharacter()
     }
 }
 
+void MainWindow::UpdateBoard(){
+    QBrush brush(Qt::black);
+
+   }

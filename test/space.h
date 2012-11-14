@@ -1,11 +1,13 @@
 #ifndef SPACE_H
 #define SPACE_H
-
+#include <QtCore>
 #include <QPainter>
 #include <QGraphicsItem>
 #include <QGraphicsScene>
+#include <QObject>
 
 class Space : public QGraphicsItem
+
 {
 public:
     Space();
@@ -15,6 +17,7 @@ public:
     bool Pressed;
     bool canMoveHere;
     bool isHere;
+
 protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
 };

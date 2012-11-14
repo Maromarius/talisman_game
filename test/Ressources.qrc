@@ -9,5 +9,6 @@
         <file>images/Assassin.png</file>
         <file>images/Druid.png</file>
         <file>images/Dwarf.png</file>
+        <file>images/Elf.png</file>
     </qresource>
 </RCC>

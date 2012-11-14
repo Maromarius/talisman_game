@@ -15,12 +15,14 @@ SOURCES += main.cpp\
     space.cpp \
     outerregionspace.cpp \
     middleregionspace.cpp \
-    innerregionspace.cpp
+    innerregionspace.cpp \
+    thread.cpp
 
 HEADERS  += mainwindow.h \
     space.h \
     outerregionspace.h \
     middleregionspace.h \
-    innerregionspace.h
+    innerregionspace.h \
+    thread.h
 
 FORMS    += mainwindow.ui

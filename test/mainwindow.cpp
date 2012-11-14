@@ -8,6 +8,20 @@
 #include "middleregionspace.h"
 #include "innerregionspace.h"
 
+
+/*void MainWindow::whichSpace(Space *space1, Space *space2){
+    if(space1->canMoveHere == true && space1->Pressed == true)
+    {
+        space2->canMoveHere = false;
+        space2->Pressed = false;
+    }
+    else if(space2->canMoveHere == true && space2->Pressed == true)
+    {
+        space1->canMoveHere = false;
+        space1->Pressed = false;
+    }
+}*/
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -20,24 +34,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->graphicsView->setScene(scene);
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
 
-    // Make all the spaces
 
+    // CREATE THE GAME BOARD
     int currentNumSpaces = 0;
     Space *spaces[49];
-
-    // How big the squares are width-wise (in pixels)
     int squareSize = 80;
-
-    // How many squares are in each row of each region? NB: "1" = Center.
     int sqRowNumbers [4] = {7, 5, 3, 1};
-
-    // What is the total number of squares in each region? NB: "1" = Center.
     int numSquares[4] = {24, 16, 8, 1};
-
-    // Which row/column are you currently printing?
     int state = 0;
-
-    // Don't ask. Will explain if I have to lol
     int modifier = -1;
 
     for(int j = 0; j < 4; j++){
@@ -48,22 +52,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
         for(int i = 0; i < numSquares[j]; i++){
 
-            // Add Outer Region Spaces
             if(j == 0)
                 spaces[currentNumSpaces] = new OuterRegionSpace(squareSize * squareXMultiplier, squareSize * squareYMultiplier);
-
-            // Add Middle Region Spaces
             else if(j == 1)
                 spaces[currentNumSpaces] = new MiddleRegionSpace(squareSize * squareXMultiplier, squareSize * squareYMultiplier);
-
-            // Add Inner Region Spaces
             else
                 spaces[currentNumSpaces] = new InnerRegionSpace(squareSize * squareXMultiplier, squareSize * squareYMultiplier);
-
             scene->addItem(spaces[currentNumSpaces]);
 
-
-            // Every Square in the Bottom Row
             if(state == 0){
                 squareXMultiplier--;
                 if(squareXMultiplier == modifier){
@@ -72,8 +68,6 @@ MainWindow::MainWindow(QWidget *parent) :
                     state++;
                 }
             }
-
-            // Every Square in the Left Column
             else if(state == 1){
                 squareYMultiplier--;
                 if(squareYMultiplier == modifier){
@@ -82,8 +76,6 @@ MainWindow::MainWindow(QWidget *parent) :
                     state++;
                 }
             }
-
-            // Every Square in the Top Row
             else if(state == 2){
                 squareXMultiplier++;
                 if(squareXMultiplier == sqRowNum + (modifier+1)){
@@ -92,23 +84,17 @@ MainWindow::MainWindow(QWidget *parent) :
                     state++;
                 }
             }
-
-            // Every Square in the Right Column
             else if(state == 3){
                 squareYMultiplier++;
             }
-
             currentNumSpaces++;
         }
-
-        // Prepare for the next region
         state = 0;
         modifier++;
     }
 
-    spaces[0]->canMoveHere = true;
-    spaces[5]->canMoveHere = true;
-    update();
+    // Keep going here
+
 }
 
 MainWindow::~MainWindow()

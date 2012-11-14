@@ -11,7 +11,8 @@ OuterRegionSpace::OuterRegionSpace(int x, int y)
     int StartY = y;
     canMoveHere = false;
     Pressed = false;
-    setPos(mapToParent(StartX, StartY));    
+    isHere = false;
+    setPos(mapToParent(StartX, StartY));
 }
 
 QRectF OuterRegionSpace::boundingRect() const
@@ -23,19 +24,29 @@ void OuterRegionSpace::paint(QPainter *painter, const QStyleOptionGraphicsItem *
 {
     QRectF rec = boundingRect();
     QBrush brush(Qt::green);
-    if(Pressed)
+    if(canMoveHere)
     {
         brush.setColor(Qt::blue);
+        if(Pressed)
+        {
+            canMoveHere = false;
+            Pressed = false;
+            isHere = true;
+            brush.setColor(Qt::red);
+        }
+    }
+    else if(isHere)
+    {
+         brush.setColor(Qt::red);
     }
     else
     {
         brush.setColor(Qt::green);
     }
 
-
-
     painter->fillRect(rec, brush);
     painter->drawRect(rec);
+    update();
 }
 
 

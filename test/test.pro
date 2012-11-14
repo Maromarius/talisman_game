@@ -12,9 +12,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    myitem.cpp
+    space.cpp \
+    outerregionspace.cpp \
+    middleregionspace.cpp \
+    innerregionspace.cpp
 
 HEADERS  += mainwindow.h \
-    myitem.h
+    space.h \
+    outerregionspace.h \
+    middleregionspace.h \
+    innerregionspace.h
 
 FORMS    += mainwindow.ui

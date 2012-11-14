@@ -8,10 +8,15 @@
 class Space : public QGraphicsItem
 {
 public:
+
     Space();
     Space(int, int);
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    bool Pressed;
+protected:
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
 };
 
 #endif

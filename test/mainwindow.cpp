@@ -29,9 +29,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     ui->setupUi(this);
-    QObject::connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(diceRoll()));
-    //QObject::connect(ui->dice,SIGNAL(clicked()),SLOT(diceRoll()));
 
+
+    QObject::connect(ui->pushButton_2,SIGNAL(clicked()),this,SLOT(LoadCharacter()));
     scene = new QGraphicsScene(this);
 
     ui->graphicsView->setScene(scene);
@@ -48,7 +48,7 @@ MainWindow::MainWindow(QWidget *parent) :
     int numSquares[4] = {24, 16, 8, 1};
     int state = 0;
     int modifier = -1;
-
+    temptemptemp = 1;
     for(int j = 0; j < 4; j++){
 
         int sqRowNum = sqRowNumbers[j];
@@ -142,8 +142,11 @@ void MainWindow::on_dice_clicked()
 void MainWindow::LoadCharacter()
 {
     QPixmap Assassin = QPixmap(":/image/images/Assassin.png");
+
     QPixmap Druid = QPixmap(":/image/images/Druid.png");
+
     QPixmap Dwarf = QPixmap(":/image/images/Dwarf.png");
+    /*
     QPixmap Elf = QPixmap(":/image/images/Elf.png");
     QPixmap Ghoul = QPixmap(":/image/images/Ghoul.png");
     QPixmap Ministrel = QPixmap(":/image/images/Ministrel.png");
@@ -155,17 +158,22 @@ void MainWindow::LoadCharacter()
     QPixmap Troll = QPixmap(":/image/images/Troll.png");
     QPixmap Warrior = QPixmap(":/image/images/warrior.png");
     QPixmap Wizard = QPixmap(":/image/images/Wizard.png");
-
-    int rollResult = (rand() % 14 + 1);
-
-    switch(rollResult)
+*/
+    int rollResult = (rand() % 3 + 1);
+    switch(temptemptemp)
     {
     case 1 :ui->characterCardLabel->setPixmap(Assassin.scaled(341,191,Qt::KeepAspectRatio));
+        temptemptemp++;
         break;
+
     case 2 :ui->characterCardLabel->setPixmap(Druid.scaled(341,191,Qt::KeepAspectRatio));
+        temptemptemp++;
         break;
+
     case 3 :ui->characterCardLabel->setPixmap(Dwarf.scaled(341,191,Qt::KeepAspectRatio));
+        temptemptemp = 1;
         break;
+        /*
     case 4 :ui->characterCardLabel->setPixmap(Elf.scaled(341,191,Qt::KeepAspectRatio));
         break;
     case 5 :ui->characterCardLabel->setPixmap(Ghoul.scaled(341,191,Qt::KeepAspectRatio));
@@ -188,8 +196,10 @@ void MainWindow::LoadCharacter()
         break;
     case 14 :ui->characterCardLabel->setPixmap(Wizard.scaled(341,191,Qt::KeepAspectRatio));
         break;
+    */
     default :
         break;
 
     }
 }
+

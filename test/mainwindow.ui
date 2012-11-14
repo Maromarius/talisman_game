@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Talisman Game</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGraphicsView" name="graphicsView">
@@ -24,50 +24,37 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>220</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Go left</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
       <x>860</x>
-      <y>220</y>
-      <width>93</width>
-      <height>28</height>
+      <y>460</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Papyrus</family>
+     </font>
     </property>
     <property name="text">
-     <string>Go Right</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView_2">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>290</y>
-      <width>141</width>
-      <height>192</height>
-     </rect>
+     <string>End Turn</string>
     </property>
    </widget>
    <widget class="QPushButton" name="dice">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>510</y>
-      <width>75</width>
-      <height>71</height>
+      <x>620</x>
+      <y>460</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Papyrus</family>
+     </font>
     </property>
     <property name="text">
      <string>Roll</string>
@@ -76,14 +63,14 @@
    <widget class="QLabel" name="diceFace">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>510</y>
+      <x>710</x>
+      <y>470</y>
       <width>71</width>
       <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="characterCardLabel">
@@ -96,7 +83,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
   </widget>
@@ -106,7 +93,7 @@
      <x>0</x>
      <y>0</y>
      <width>969</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

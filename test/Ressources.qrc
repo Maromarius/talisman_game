@@ -1,5 +1,13 @@
 <RCC>
-    <qresource prefix="/images">
-        <file>images/talisman-board.jpg</file>
+    <qresource prefix="/image">
+        <file>images/D1.png</file>
+        <file>images/d2.png</file>
+        <file>images/d3.png</file>
+        <file>images/d4.png</file>
+        <file>images/d5.png</file>
+        <file>images/d6.png</file>
+        <file>images/Assassin.png</file>
+        <file>images/Druid.png</file>
+        <file>images/Dwarf.png</file>
     </qresource>
 </RCC>

@@ -18,7 +18,7 @@ Space::Space(int x, int y)
 
 void Space::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    Pressed =  true;
+    Pressed =  !Pressed;
     update();
     QGraphicsItem::mousePressEvent(event);
 

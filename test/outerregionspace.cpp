@@ -22,6 +22,16 @@ void OuterRegionSpace::paint(QPainter *painter, const QStyleOptionGraphicsItem *
 {
     QRectF rec = boundingRect();
     QBrush brush(Qt::green);
+    if(Pressed)
+    {
+        brush.setColor(Qt::blue);
+
+    }
+    else
+    {
+        brush.setColor(Qt::green);
+    }
+
     painter->fillRect(rec, brush);
     painter->drawRect(rec);
 }

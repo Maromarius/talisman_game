@@ -22,6 +22,16 @@ void MiddleRegionSpace::paint(QPainter *painter, const QStyleOptionGraphicsItem 
 {
     QRectF rec = boundingRect();
     QBrush brush(Qt::yellow);
+
+    if(Pressed)
+    {
+        brush.setColor(Qt::blue);
+
+    }
+    else
+    {
+        brush.setColor(Qt::yellow);
+    }
     painter->fillRect(rec, brush);
     painter->drawRect(rec);
 }

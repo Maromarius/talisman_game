@@ -29,7 +29,8 @@ void Space::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     {
         brush.setColor(Qt::blue);
     }
-    else{
+    else
+    {
         brush.setColor(Qt::black);
     }
 

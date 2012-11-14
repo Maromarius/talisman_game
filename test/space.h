@@ -16,7 +16,7 @@ public:
     bool Pressed;
 protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
+
 };
 
 #endif

@@ -25,31 +25,15 @@ void Space::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
 {
     QRectF rec = boundingRect();
     QBrush brush(Qt::black);
-    if(Pressed)
-    {
-        brush.setColor(Qt::blue);
-    }
-    else
-    {
-        brush.setColor(Qt::black);
-    }
-
-
+   brush.setColor(Qt::black);
     painter->fillRect(rec, brush);
     painter->drawRect(rec);
 }
 
 void Space::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    Pressed =  true;
+    Pressed =  !Pressed;
     update();
     QGraphicsItem::mousePressEvent(event);
 
-}
-
-void Space::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
-{
-    Pressed =  false;
-    update();
-    QGraphicsItem::mouseReleaseEvent(event);
 }

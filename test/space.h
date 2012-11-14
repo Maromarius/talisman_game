@@ -11,12 +11,12 @@ public:
 
     Space();
     Space(int, int);
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    virtual QRectF boundingRect() const = 0;
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) = 0;
     bool Pressed;
+    bool canMoveHere;
 protected:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
-
 };
 
 #endif

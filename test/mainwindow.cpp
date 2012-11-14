@@ -16,26 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->graphicsView->setScene(scene);
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
-    scene->setSceneRect(0, 0, 560, 560);
-
-
-    QPen mypen = QPen(Qt::black);
-
-    QLineF TopLine(scene->sceneRect().topLeft(),scene->sceneRect().topRight());
-    QLineF LeftLine(scene->sceneRect().topLeft(),scene->sceneRect().bottomLeft());
-    QLineF RightLine(scene->sceneRect().topRight(),scene->sceneRect().bottomRight());
-    QLineF BottomLine(scene->sceneRect().bottomLeft(),scene->sceneRect().bottomRight());
-
-    scene->addLine(TopLine,mypen);
-    scene->addLine(LeftLine,mypen);
-    scene->addLine(RightLine,mypen);
-    scene->addLine(BottomLine,mypen);
-
 
     // Make all the spaces
-    int numSpaces = 49;
+
     int currentNumSpaces = 0;
-    Space *spaces[numSpaces];
+    Space *spaces[49];
 
     // How big the squares are width-wise (in pixels)
     int squareSize = 80;

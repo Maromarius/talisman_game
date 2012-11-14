@@ -105,6 +105,10 @@ MainWindow::MainWindow(QWidget *parent) :
         state = 0;
         modifier++;
     }
+
+    spaces[0]->canMoveHere = true;
+    spaces[5]->canMoveHere = true;
+    update();
 }
 
 MainWindow::~MainWindow()

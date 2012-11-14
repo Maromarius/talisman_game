@@ -1,3 +1,6 @@
+#include <QDialog>
+#include <QtCore>
+#include <QtGui>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "space.h"

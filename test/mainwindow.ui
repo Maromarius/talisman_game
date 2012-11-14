@@ -27,8 +27,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>210</y>
+      <x>610</x>
+      <y>220</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -40,8 +40,8 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>730</x>
-      <y>210</y>
+      <x>860</x>
+      <y>220</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -53,9 +53,9 @@
    <widget class="QGraphicsView" name="graphicsView_2">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>10</y>
-      <width>256</width>
+      <x>820</x>
+      <y>290</y>
+      <width>141</width>
       <height>192</height>
      </rect>
     </property>
@@ -63,8 +63,8 @@
    <widget class="QPushButton" name="dice">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>330</y>
+      <x>610</x>
+      <y>510</y>
       <width>75</width>
       <height>71</height>
      </rect>
@@ -76,10 +76,23 @@
    <widget class="QLabel" name="diceFace">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>330</y>
+      <x>700</x>
+      <y>510</y>
       <width>71</width>
       <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="characterCardLabel">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>10</y>
+      <width>341</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="text">

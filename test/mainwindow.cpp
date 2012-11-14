@@ -37,6 +37,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->graphicsView->setScene(scene);
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
 
+    //Loading CharacterCard
+    LoadCharacter();
 
     // CREATE THE GAME BOARD
     int currentNumSpaces = 0;
@@ -130,6 +132,61 @@ void MainWindow::on_dice_clicked()
     case 5 :ui->diceFace->setPixmap(diceImg5.scaled(71,71,Qt::KeepAspectRatio));
         break;
     case 6 :ui->diceFace->setPixmap(diceImg6.scaled(71,71,Qt::KeepAspectRatio));
+        break;
+    default :
+        break;
+
+    }
+}
+
+void MainWindow::LoadCharacter()
+{
+    QPixmap Assassin = QPixmap(":/image/images/Assassin.png");
+    QPixmap Druid = QPixmap(":/image/images/Druid.png");
+    QPixmap Dwarf = QPixmap(":/image/images/Dwarf.png");
+    QPixmap Elf = QPixmap(":/image/images/Elf.png");
+    QPixmap Ghoul = QPixmap(":/image/images/Ghoul.png");
+    QPixmap Ministrel = QPixmap(":/image/images/Ministrel.png");
+    QPixmap Monk = QPixmap(":/image/images/Monk.png");
+    QPixmap Priest = QPixmap(":/image/images/Priest.png");
+    QPixmap Prophetess = QPixmap(":/image/images/Prophetess.png");
+    QPixmap Sorceress = QPixmap(":/image/images/Sorceress.png");
+    QPixmap Thief = QPixmap(":/image/images/Thief.png");
+    QPixmap Troll = QPixmap(":/image/images/Troll.png");
+    QPixmap Warrior = QPixmap(":/image/images/warrior.png");
+    QPixmap Wizard = QPixmap(":/image/images/Wizard.png");
+
+    int rollResult = (rand() % 14 + 1);
+
+    switch(rollResult)
+    {
+    case 1 :ui->characterCardLabel->setPixmap(Assassin.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 2 :ui->characterCardLabel->setPixmap(Druid.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 3 :ui->characterCardLabel->setPixmap(Dwarf.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 4 :ui->characterCardLabel->setPixmap(Elf.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 5 :ui->characterCardLabel->setPixmap(Ghoul.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 6 :ui->characterCardLabel->setPixmap(Ministrel.scaled(341,191,Qt::KeepAspectRatio));
+         break;
+    case 7 :ui->characterCardLabel->setPixmap(Monk.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 8 :ui->characterCardLabel->setPixmap(Priest.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 9 :ui->characterCardLabel->setPixmap(Prophetess.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 10 :ui->characterCardLabel->setPixmap(Sorceress.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 11 :ui->characterCardLabel->setPixmap(Thief.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 12 :ui->characterCardLabel->setPixmap(Troll.scaled(341,191,Qt::KeepAspectRatio));
+         break;
+    case 13 :ui->characterCardLabel->setPixmap(Warrior.scaled(341,191,Qt::KeepAspectRatio));
+        break;
+    case 14 :ui->characterCardLabel->setPixmap(Wizard.scaled(341,191,Qt::KeepAspectRatio));
         break;
     default :
         break;

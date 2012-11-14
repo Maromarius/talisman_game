@@ -16,23 +16,9 @@ Space::Space(int x, int y)
     setPos(mapToParent(StartX, StartY));
 }
 
-QRectF Space::boundingRect() const
-{
-    return QRect(0, 0, 80, 80);
-}
-
-void Space::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
-{
-    QRectF rec = boundingRect();
-    QBrush brush(Qt::black);
-   brush.setColor(Qt::black);
-    painter->fillRect(rec, brush);
-    painter->drawRect(rec);
-}
-
 void Space::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    Pressed =  !Pressed;
+    Pressed =  true;
     update();
     QGraphicsItem::mousePressEvent(event);
 

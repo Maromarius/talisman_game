@@ -20,7 +20,7 @@ int BigCraftCounters = 8;
 int LivesCounters = 40;
 int FateCounters = 36;
 int GoldCoins = 30;
-int turn = 0;
+int turn = 1;
 
 void initializeCharacterArray(void)
 {
@@ -33,7 +33,7 @@ void initializeCharacterArray(void)
 int diceRoll(void)
 {
 	srand((unsigned int)time(0));
-	return rand() % 6 + 1;
+	return ((int) rand() % 6 + 1);
 }
 
 
@@ -68,7 +68,7 @@ int main(void){
 		
 	// Create players, assign characters to players, and update which characters are in play
 	initializeCharacterArray();
-	for (int i=0; i<numberOfPlayers; i++)
+	for (int i=1; i<numberOfPlayers+1; i++)
 	{
 		cout << "Creating Player " << i << endl;
 		new (&players[i]) Player(TalismanMap, isInPlay);
@@ -77,25 +77,99 @@ int main(void){
 	//--------------GAME--------------
 	// Game start. Here is the big WHILE loop.
 	//while(numberOfPlayersAlive > 1){
-	for(int testTurns = 0 ; testTurns<10; testTurns++)
+	for(int testTurns = 0 ; testTurns<20; testTurns++)
 	{
 		if(!players[turn].checkIfPermaDead())
 		{
+			char movedirection;
+			int dRoll = diceRoll();
+			char decision;
+			bool inOutter=true;
+			bool inMiddle=false;
+			bool inInner=false;
+			
 			cout << "\nIt is currently Player " << turn << "'s turn!" << endl;
 			cout << players[turn].getCharacter().getProfession() << ", you are at the "<< players[turn].getCurrentArea()<<" please press any key to roll the die." << endl;
 			system("PAUSE");
-			cout << "You have rolled a " << diceRoll() << "!" << endl;
+			cout << "You have rolled a " << dRoll << "!\n" 
+				 << "Would you like to move right(r) or left(l)?" << endl;
+			cin >> movedirection;
+
+			for (int i=0; i<dRoll; i++)
+			{
+				if(movedirection == 'r')
+				{
+					players[turn].moveCharacterRight();
+					cout << "You are moving towards the "<< players[turn].getCurrentArea()<<endl;
+				}
+				else if(movedirection == 'l')
+				{
+					players[turn].moveCharacterLeft();
+					cout << "You are moving towards the "<< players[turn].getCurrentArea()<<endl;
+				}
+				else
+				{
+					cout<<"Can't move there!";
+				}
+
+
+				if(players[turn].getCurrentArea()=="SENTINEL" && inOutter)
+				{
+				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the SENTINEL, would you like to tempt to cross the bridge? (y/n) " << endl;
+				cin>>decision;
+					if(decision == 'y')
+					{
+						cout<<"Congratulations, you have crossed the bridge!!\n"
+							<<"Would you like to continue right(r) or left(l)?"<<endl;
+						cin>>movedirection;
+						players[turn].setCurrentArea(TalismanMap,"middle","HILLS");
+						inOutter=false;
+						inMiddle=true;
+						i++;
+					}
+				}
+
+				if(players[turn].getCurrentArea()=="HILLS" && inMiddle)
+				{
+				cout << players[turn].getCharacter().getProfession() << ", you are back at the HILLS,would you like to cross the bridge? (y/n) " << endl;
+				cin>>decision;
+					if(decision == 'y')
+					{
+						cout<<"You have crossed the bridge!!\n"
+							<<"Would you like to continue right(r) or left(l)?"<<endl;
+						cin>>movedirection;
+						players[turn].setCurrentArea(TalismanMap,"outter","SENTINEL");
+						inMiddle=false;
+						inOutter=true;
+						i++;
+					}
+				}
+				if(players[turn].getCurrentArea()=="PORTAL OF POWER")
+				{
+				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the PORTAL OF POWER, would you like to tempt to open it? (y/n) " << endl;
+				cin>>decision;
+					if(decision == 'y')
+					{
+						cout<<"You have opened the portal!!\n"
+							<<"Would you like to continue right(r) or left(l)?"<<endl;
+						cin>>movedirection;
+						players[turn].setCurrentArea(TalismanMap,"inner","PLAIN OF PERIL");
+						inInner = true;
+						inMiddle=false;
+						i++;
+					}
+				}
+			if(inInner)
+				break;
+			}
+			
+			cout << players[turn].getCharacter().getProfession() << ", you are now at the "<< players[turn].getCurrentArea()<<endl;
+
+			
 		}
 
 
-
-
-
-
-
-
-
-		(turn == numberOfPlayers-1)?(turn=0):(turn++);
+		(turn == numberOfPlayers)?(turn=1):(turn++);
 	}	
 
 

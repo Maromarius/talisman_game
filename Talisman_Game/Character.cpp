@@ -282,6 +282,12 @@ int Character::getMaxObjectSize(){
 	return this->maxObjects;
 }
 
+void Character::moveLeft()
+{
+	this->currentLocation = this->currentLocation->left;
+}
 
-
-
+void Character::moveRight()
+{
+	this->currentLocation = this->currentLocation->right;
+}

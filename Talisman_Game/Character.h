@@ -77,6 +77,8 @@ public:
     void updateMule();
     void updateToad();
 	void addObject(Object);
+	void moveRight();
+	void moveLeft();
 	//void removeObject(Object);
 	string getProfession();
 	string getSpawnPoint();

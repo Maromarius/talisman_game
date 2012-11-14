@@ -27,7 +27,7 @@ Player::Player(Map* Board, int isInPlay[])
 
 		character = createCharacter(characterRoll);
 		isPermaDead = false;
-		Player::setCurrentArea(Board,character.getSpawnPoint());
+		Player::setCurrentArea(Board,"outter",character.getSpawnPoint());
 }
 
 Player::~Player()
@@ -117,12 +117,27 @@ Character Player::getCharacter()
 	return character;
 }
 
-void Player::setCurrentArea(Map * Board, string TargetArea)
+void Player::setCurrentArea(Map * Board, string region,string TargetArea)
 {
-	this->currentArea = Board->OutterRegion.getArea(TargetArea);
+	if(region == "inner")
+		this->currentArea = Board->InnerRegion.getArea(TargetArea);
+	if(region == "middle")
+		this->currentArea = Board->MiddleRegion.getArea(TargetArea);
+	if(region == "outter")
+		this->currentArea = Board->OutterRegion.getArea(TargetArea);
 }
 
 string Player::getCurrentArea(void)
 {
 	return currentArea->areaName;
+}
+
+void Player :: moveCharacterRight()
+{
+	this->currentArea = this->currentArea->right;
+}
+
+void Player :: moveCharacterLeft()
+{
+	this->currentArea = this->currentArea->left;
 }

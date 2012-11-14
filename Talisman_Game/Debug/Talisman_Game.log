@@ -1,45 +1,82 @@
-﻿Build started 11/11/2012 8:29:57 PM.
-     1>Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (build target(s)).
+﻿Build started 14/11/2012 3:56:45 PM.
+     1>Project "C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\Talisman_Game.unsuccessfulbuild".
+         Creating "Debug\Talisman_Game.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
        Link:
-         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Talisman_Game.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.lib" /MACHINE:X86 Debug\Area.obj
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Talisman_Game.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.lib" /MACHINE:X86 Debug\Ape.obj
+         Debug\Area.obj
          Debug\Armor.obj
          Debug\Armour.obj
          Debug\Assassin.obj
          Debug\Axe.obj
-         Debug\BattleHulk.obj
+         Debug\Bandit.obj
          Debug\Bear.obj
+         Debug\BlackKnight.obj
+         Debug\Castle.obj
+         Debug\Chapel.obj
          Debug\Character.obj
+         Debug\Chasm.obj
+         Debug\City.obj
+         Debug\Crags.obj
+         Debug\Crypt.obj
+         Debug\CursedGlade.obj
+         Debug\Demon.obj
+         Debug\Desert.obj
+         Debug\DiceWithHeart.obj
+         Debug\Dragon.obj
          Debug\Druid.obj
          Debug\Dwarf.obj
          Debug\Elf.obj
          Debug\Enemy.obj
+         Debug\Fields.obj
+         Debug\Forest.obj
+         Debug\Ghost.obj
          Debug\Ghoul.obj
+         Debug\Giant.obj
+         Debug\Goblin.obj
+         Debug\Graveyard.obj
          Debug\Helmet.obj
+         Debug\HiddenValley.obj
+         Debug\Hills.obj
+         Debug\Hobgoblin.obj
+         Debug\Lemure.obj
+         Debug\Lion.obj
          Debug\main.obj
          Debug\Map.obj
+         Debug\Mines.obj
          Debug\Ministrel.obj
          Debug\Monk.obj
          Debug\Object.obj
+         Debug\Ogre.obj
          Debug\Player.obj
          Debug\Priest.obj
          Debug\Prophetess.obj
          Debug\Region.obj
+         Debug\Serpent.obj
+         Debug\Shadow.obj
          Debug\Sorceress.obj
+         Debug\Spectre.obj
          Debug\Sword.obj
          Debug\Thief.obj
          Debug\Troll.obj
          Debug\Warrior.obj
          Debug\Weapon.obj
+         Debug\WildBoar.obj
          Debug\Wizard.obj
-     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall Player::Player(void)" (??0Player@@QAE@XZ) referenced in function _main
-     1>Region.obj : error LNK2019: unresolved external symbol "public: __thiscall Area::~Area(void)" (??1Area@@QAE@XZ) referenced in function "public: void * __thiscall Area::`scalar deleting destructor'(unsigned int)" (??_GArea@@QAEPAXI@Z)
-     1>C:\Users\Deven\Documents\ProjectALL\trunk\Debug\Talisman_Game.exe : fatal error LNK1120: 2 unresolved externals
-     1>Done Building Project "C:\Users\Deven\Documents\ProjectALL\trunk\Talisman_Game\Talisman_Game.vcxproj" (build target(s)) -- FAILED.
+         Debug\Wolf.obj
+         Debug\Wraith.obj
+         LINK : C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe not found or not built by the last incremental link; performing full link
+         Talisman_Game.vcxproj -> C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe;#1" /manifest Debug\Talisman_Game.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\Talisman_Game.unsuccessfulbuild".
+         Touching "Debug\Talisman_Game.lastbuildstate".
+     1>Done Building Project "C:\Users\Arnaud\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.37
+Time Elapsed 00:00:00.88

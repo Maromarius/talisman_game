@@ -16,6 +16,7 @@ SOURCES += main.cpp\
     outerregionspace.cpp \
     middleregionspace.cpp \
     innerregionspace.cpp \
+    threadstest.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -23,6 +24,10 @@ HEADERS  += mainwindow.h \
     outerregionspace.h \
     middleregionspace.h \
     innerregionspace.h \
+    threadstest.h
 
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    Resource.qrc

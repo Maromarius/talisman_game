@@ -17,7 +17,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     void whichSpace(Space*, Space*);
     ~MainWindow();
+    void diceRoll();
     
+private slots:
+    void on_dice_clicked();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;

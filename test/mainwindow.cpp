@@ -26,8 +26,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
+
     ui->setupUi(this);
-    QObject::connect(ui->pushButton,SIGNAL(clicked()),qApp,SLOT(quit()));
+    QObject::connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(diceRoll()));
+    //QObject::connect(ui->dice,SIGNAL(clicked()),SLOT(diceRoll()));
 
     scene = new QGraphicsScene(this);
 
@@ -100,4 +103,36 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_dice_clicked()
+{
+    QPixmap diceImg1 = QPixmap(":/image/images/D1.png");
+    QPixmap diceImg2 = QPixmap(":/image/images/d2.png");
+    QPixmap diceImg3 = QPixmap(":/image/images/d3.png");
+    QPixmap diceImg4 = QPixmap(":/image/images/d4.png");
+    QPixmap diceImg5 = QPixmap(":/image/images/d5.png");
+    QPixmap diceImg6 = QPixmap(":/image/images/d6.png");
+
+    int rollResult = (rand() % 6 + 1);
+    qDebug()<<"success in rolling dice"<<rollResult;
+
+    switch(rollResult)
+    {
+    case 1 :ui->diceFace->setPixmap(diceImg1.scaled(71,71,Qt::KeepAspectRatio));
+        break;
+    case 2 :ui->diceFace->setPixmap(diceImg2.scaled(71,71,Qt::KeepAspectRatio));
+        break;
+    case 3 :ui->diceFace->setPixmap(diceImg3.scaled(71,71,Qt::KeepAspectRatio));
+        break;
+    case 4 :ui->diceFace->setPixmap(diceImg4.scaled(71,71,Qt::KeepAspectRatio));
+        break;
+    case 5 :ui->diceFace->setPixmap(diceImg5.scaled(71,71,Qt::KeepAspectRatio));
+        break;
+    case 6 :ui->diceFace->setPixmap(diceImg6.scaled(71,71,Qt::KeepAspectRatio));
+        break;
+    default :
+        break;
+
+    }
 }

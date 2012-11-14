@@ -60,6 +60,32 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="dice">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>330</y>
+      <width>75</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Roll</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="diceFace">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>330</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -67,7 +93,7 @@
      <x>0</x>
      <y>0</y>
      <width>969</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

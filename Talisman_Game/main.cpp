@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "Sword.h"
 
 using namespace std;
 
@@ -71,8 +72,27 @@ int main(void){
 	for (int i=1; i<numberOfPlayers+1; i++)
 	{
 		cout << "Creating Player " << i << endl;
+		cout << endl;
 		new (&players[i]) Player(TalismanMap, isInPlay);
+
+		cout << players[i].getCharacter().getProfession() <<" has been created." << endl;
+		cout << players[i].getCharacter().getProfession() << "'s stats are as follows:" << endl;
+		cout << "Current Life: " << players[i].getCharacter().getLife() << "/" << players[i].getCharacter().getBaseLife() << endl;
+		cout << "Strength: " << players[i].getCharacter().getBaseStrength() << " (" << players[i].getCharacter().getBaseStrength() << " Base + " << players[i].getCharacter().getCounterStrength() << " Counters)" << endl; 
+		cout << "Craft: " << players[i].getCharacter().getBaseCraft() << " (" <<  players[i].getCharacter().getBaseCraft() << " Base + " <<  players[i].getCharacter().getCounterCraft() << " Counters)" << endl; 
+		cout << endl;
+
+		
+
 	}	
+
+	for (int i=1; i<numberOfPlayers+1; i++)
+	{
+		Object *o1 = new Sword();
+		players[i].getCharacter().addObject(*o1);
+		string temp = players[i].getCharacter().showBag();
+		cout << temp;
+	}
 
 	//--------------GAME--------------
 	// Game start. Here is the big WHILE loop.

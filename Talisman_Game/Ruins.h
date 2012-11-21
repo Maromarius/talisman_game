@@ -14,7 +14,7 @@ public:
     static const string DESCRIPTION;
 
     Ruins();
-    ~Ruin();
+    ~Ruins();
 };
 
 #endif

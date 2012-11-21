@@ -1,7 +1,7 @@
 #include "WarlocksCave.h"
 #include "Area.h"
 
-const string WarlocksCave::NAME = "WarlocksCave";
+const string WarlocksCave::NAME = "Warlocks Cave";
 const string WarlocksCave::DESCRIPTION =	"You may go on a quest.\n"
 									"The Vampire will accept Followers instead of Lives.\n"
 									"1) Take 1 Life from another Character.\n"

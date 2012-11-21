@@ -506,5 +506,53 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Oasis.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Pits.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Plains.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="PortalOfPower.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Ruins.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Runes.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Sentinel.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Tavern.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Temple.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="ValleyOfFire.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="VampiresTower.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Village.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="WarlocksCave.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="WerewolfDen.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="Woods.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
+    <ClCompile Include="PlainOfPeril.cpp">
+      <Filter>Source Files\Areas</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

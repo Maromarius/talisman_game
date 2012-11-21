@@ -6,7 +6,6 @@
 #include <cstdlib>
 #include <ctime>
 #include "Sword.h"
-
 using namespace std;
 
 const int MAXNUMBEROFPLAYERS = 6;
@@ -49,21 +48,20 @@ int main(void){
 	// Board Setup
 	Map* TalismanMap = new Map();
 
-	// Character Setup
+	//Number of Players Setup
 	bool correctInput = false;
-	int tempInput;
+	int characcterNumberSelection;
 	while (!correctInput)
 	{
 		cout<<"How many players will be playing this game?"<<endl;	
-		cin>>tempInput;
+		cin>>characcterNumberSelection;
 		//Checking for correct number of players
-		if(tempInput>1 && tempInput<=6)
+		if(characcterNumberSelection>1 && characcterNumberSelection<=6)
 			correctInput = true;
-
 		if(!correctInput)
 			cout<<"I am sorry that number of players is not permitted, please try again."<<endl;
 	}
-	numberOfPlayers = tempInput;
+	numberOfPlayers = characcterNumberSelection;
 	numberOfPlayersAlive = numberOfPlayers;
 	Player *players = new Player[numberOfPlayers];
 		

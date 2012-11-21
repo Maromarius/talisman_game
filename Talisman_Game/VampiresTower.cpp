@@ -1,7 +1,7 @@
 #include "VampiresTower.h"
 #include "Area.h"
 
-const string VampiresTower::NAME = "VampiresTower";
+const string VampiresTower::NAME = "Vampires Tower";
 const string VampiresTower::DESCRIPTION =	"You must roll 1 die to determine how many Lives the Vampire takes from you.\n"
 									"The Vampire will accept Followers instead of Lives.\n"
 									"1-2) Lose 1 Life. \n"

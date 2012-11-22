@@ -4,6 +4,8 @@
 const string Character::ALIGNMENT = "";
 const string Character::PROFESSION = "";*/
 
+
+//-----CONSTRUCTORS/DESTRUCTOR-----//
 Character::Character(){}
 
 Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _baseFate, 
@@ -19,11 +21,11 @@ Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _base
 
 	this->profession = profession;
 
-    hasMule = false;
+    mule = false;
     isToad = false;
-	hasTalisman = false;
-	hasAxe = false;
-	hasRaft = false;
+	talisman = false;
+	axe = false;
+	raft = false;
 	isAlive = true;
 
 
@@ -39,7 +41,6 @@ Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _base
     spawnPoint = _location;
     alignment = _alignment;
 }
-
 
 Character::~Character(void)
 {
@@ -57,11 +58,11 @@ Character::~Character(void)
     spawnPoint = "";
     alignment = "";
 	profession = "";
-    hasMule = 0;
+    mule = 0;
     isToad = 0;
 }
 
-
+//-----OBJECTS-----//
 void Character::addObject(Object obj){
 	
 	
@@ -70,7 +71,7 @@ void Character::addObject(Object obj){
 	if(bag.size() <=3){
 		bag.push_back(obj);
 	}
-	else if(hasMule&& bag.size() <=7){
+	else if(mule&& bag.size() <=7){
 		bag.push_back(obj);	
 	}
 	else
@@ -80,8 +81,8 @@ void Character::addObject(Object obj){
 	
 
 }
-/*
-void Character::removeObject(Object obj){
+
+/*void Character::removeObject(Object obj){
 
 	string name = obj.getName();
 	for(int i = 0; i <= bag.size(); i++){
@@ -90,9 +91,9 @@ void Character::removeObject(Object obj){
 			bag.erase();
 		}
 	}
-}
-*/
+}*/
 
+//-----GAIN/LOSS-----//
 void Character::gainStrength(int str){
 
 	counterStrength += str;
@@ -107,7 +108,6 @@ void Character::loseStrength(int str){
 		counterStrength = 0;
 	}	
 }
-
 
 void Character::gainCraft(int craft){
 
@@ -153,8 +153,6 @@ void Character::replenishLives(int lives){
 	}
 }
 
-
-
 void Character::gainFate(int fate){
 
 	currentFate =+ fate;
@@ -184,17 +182,6 @@ void Character::replenishFate(int fate){
 	}
 }
 
-void Character::updateMule(){
-	//TODO
-	hasMule = !hasMule;
-}
-
-
-void Character::updateToad(){
-
-	isToad = !isToad;
-}
-
 void Character::gainGold(int _gold){
 
 	gold += _gold;
@@ -206,6 +193,18 @@ void Character::loseGold(int _gold){
 	gold -= _gold;
 }
 
+//-----UPDATES-----//
+void Character::updateMule(){
+	//TODO
+	mule = !mule;
+}
+
+void Character::updateToad(){
+
+	isToad = !isToad;
+}
+
+//-----GETTERS/SETTERS-----//
 string Character::getProfession(){
 
 	return this->profession;
@@ -223,12 +222,18 @@ int Character::getLife(){
 
 int Character::getStrength(){
 
-	return (this->baseStrength+this->counterStrength);
+	if (this->isToad)
+		return 1;
+	else
+		return (this->baseStrength+this->counterStrength);//Add object strength
 }
 
 int Character::getCraft(){
-
-	return (this->baseCraft+this->counterCraft);
+	
+	if (this->isToad)
+		return 1;
+	else
+		return (this->baseCraft+this->counterCraft);//Add object craft
 }
 
 int Character::getBaseLife(){
@@ -282,12 +287,53 @@ int Character::getMaxObjectSize(){
 	return this->maxObjects;
 }
 
-void Character::moveLeft()
+bool Character::hasRaft()
 {
-	this->currentLocation = this->currentLocation->left;
+	return this->raft;
 }
 
-void Character::moveRight()
+void Character::setHasRaft(bool raftSituation)
 {
-	this->currentLocation = this->currentLocation->right;
+	this->raft = raftSituation;
+}
+
+void Character::setHasTalisman(bool talismanSituation)
+{
+	this->talisman = talismanSituation;
+}
+
+//-----PRINTSTATS-----//
+void Character::printStats()
+{
+		cout << this->getProfession() << "'s stats are as follows:" << endl;
+		cout << "Current Life: " << this->getLife() << "/" << this->getBaseLife() << endl;
+		cout << "Strength: " << this->getBaseStrength() << " (" << this->getBaseStrength() << " Base + " << this->getCounterStrength() << " Counters)" << endl; 
+		cout << "Craft: " << this->getBaseCraft() << " (" <<  this->getBaseCraft() << " Base + " <<  this->getCounterCraft() << " Counters)" << endl; 
+		cout << endl;
+		return;
+}
+
+//-----MISCELLANEOUS-----//
+void Character::acquiresRaft()
+{
+	//Add raft object to bag
+	this->raft = true;
+}
+
+bool Character::isBagFull()
+{
+	if(this->mule)
+		return !(this->bag.size()<8);
+	else
+		return !(this->bag.size()<4);
+}
+
+bool Character::hasAxe()
+{
+	return this->axe;
+}
+
+bool Character::hasTalisman()
+{
+	return this->talisman;
 }

@@ -34,17 +34,16 @@ protected: //TO CHANGE!!!
 	int fateTokens;			// Amount of Fate Tokens the Character currently has
 	int maxObjects;
 
-	bool hasTalisman;		// Is one of the character's Adventure Cards a Talisman?
-	bool hasMule;			// Is the character own a Mule as one of his Adventure Cards?
-	bool hasAxe;			// Does the character have an Axe as one of his Adventure Cards?
-	bool hasRaft;			// Does the character have a Raft as one of his Adventure Cards?
+	bool talisman;			// Is one of the character's Adventure Cards a Talisman?
+	bool mule;				// Is the character own a Mule as one of his Adventure Cards?
+	bool axe;				// Does the character have an Axe as one of his Adventure Cards?
+	bool raft;				// Does the character have a Raft as one of his Adventure Cards?
 	bool isAlive;
 
 	bool isToad;			// Is the character currently inflicted with Toad status?
 	int numToadTurnsLeft;	// How many turns does the character have left of being a Toad?
 	
-	string spawnPoint;
-	Area* currentLocation;
+	string spawnPoint;		// The Area on the Map where this character starts
 
 	string alignment;
 	string profession;
@@ -93,7 +92,14 @@ public:
 	string showBag();
 	vector<Object> getBag();
 	int getMaxObjectSize();
-
+	void printStats();
+	bool hasAxe();
+	bool hasRaft();
+	void setHasRaft(bool);
+	bool hasTalisman();
+	void setHasTalisman(bool);
+	void acquiresRaft();
+	bool isBagFull();
 
 
 };

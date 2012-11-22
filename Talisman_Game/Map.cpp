@@ -17,6 +17,8 @@ Map::Map()
 	for (int i = 0 ;  i<8 ;i++)	
 		this->InnerRegion.addAtTail(InnerRegionAreas[i]);
 
+	this->Crown.addAtTail("CROWN OF COMMAND");
+
 }
 
 Map::~Map()

@@ -29,6 +29,7 @@ class Player
 	protected:
 		Character character;
 		Area* currentArea;
+		string currentRegion;
 		bool isPermaDead;
 		static const int NUMBEROFCHARACTERS = 14;
 
@@ -42,6 +43,8 @@ class Player
 		void Player::isNowPermaDead(void);
 		void Player::setCurrentArea(Map * Board,string region, string TargetArea);
 		string Player::getCurrentArea(void);
+		string Player::getCurrentRegion(void);
+		void Player::setCurrentRegion(string);
 		void moveCharacterLeft();
 		void moveCharacterRight();
 };

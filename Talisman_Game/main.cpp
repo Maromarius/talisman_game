@@ -45,10 +45,10 @@ int main(void){
 		<<"/////////////////////////////////////////////\n"<<endl;
 	
 	//--------------SETUP--------------
-	// Board Setup
+	//--Board Setup
 	Map* TalismanMap = new Map();
 
-	//Number of Players Setup
+	//--Number of Players Setup
 	bool correctInput = false;
 	int characcterNumberSelection;
 	while (!correctInput)
@@ -65,54 +65,111 @@ int main(void){
 	numberOfPlayersAlive = numberOfPlayers;
 	Player *players = new Player[numberOfPlayers];
 		
-	// Create players, assign characters to players, and update which characters are in play
+	//--Assign characters to players
 	initializeCharacterArray();
 	for (int i=1; i<numberOfPlayers+1; i++)
 	{
 		cout << "Creating Player " << i << endl;
-		cout << endl;
 		new (&players[i]) Player(TalismanMap, isInPlay);
-
 		cout << players[i].getCharacter().getProfession() <<" has been created." << endl;
-		cout << players[i].getCharacter().getProfession() << "'s stats are as follows:" << endl;
-		cout << "Current Life: " << players[i].getCharacter().getLife() << "/" << players[i].getCharacter().getBaseLife() << endl;
-		cout << "Strength: " << players[i].getCharacter().getBaseStrength() << " (" << players[i].getCharacter().getBaseStrength() << " Base + " << players[i].getCharacter().getCounterStrength() << " Counters)" << endl; 
-		cout << "Craft: " << players[i].getCharacter().getBaseCraft() << " (" <<  players[i].getCharacter().getBaseCraft() << " Base + " <<  players[i].getCharacter().getCounterCraft() << " Counters)" << endl; 
-		cout << endl;
-
-		
-
-	}	
-
-	for (int i=1; i<numberOfPlayers+1; i++)
-	{
-		Object *o1 = new Sword();
-		players[i].getCharacter().addObject(*o1);
-		string temp = players[i].getCharacter().showBag();
-		cout << temp;
+		players[i].getCharacter().printStats();
 	}
 
+
+
+
+
+
 	//--------------GAME--------------
-	// Game start. Here is the big WHILE loop.
-	//while(numberOfPlayersAlive > 1){
+	//while(numberOfPlayersAlive > 1)
 	for(int testTurns = 0 ; testTurns<20; testTurns++)
 	{
+		//----Character Movement/Activity on Board
 		if(!players[turn].checkIfPermaDead())
 		{
-			char movedirection;
-			int dRoll = diceRoll();
-			char decision;
-			bool inOutter=true;
-			bool inMiddle=false;
-			bool inInner=false;
-			
 			cout << "\nIt is currently Player " << turn << "'s turn!" << endl;
-			cout << players[turn].getCharacter().getProfession() << ", you are at the "<< players[turn].getCurrentArea()<<" please press any key to roll the die." << endl;
-			system("PAUSE");
-			cout << "You have rolled a " << dRoll << "!\n" 
-				 << "Would you like to move right(r) or left(l)?" << endl;
-			cin >> movedirection;
+			cout << players[turn].getCharacter().getProfession() << ", you are at the "<< players[turn].getCurrentArea()<<endl;
+			char decision;
+			bool endTurn=false;
 
+			//--Non-Rolling Non-Movement Alternative to the Turn 1/2
+			//-Casting the Command Spell
+			if(players[turn].getCurrentArea()=="CROWN OF COMMAND")
+			{
+				cout<<players[turn].getCharacter().getProfession()<<", you are still at the COROWN OF COMMAND, please press any key to roll the die and cast the Command Spell!" << endl;
+				system("PAUSE");
+				int dRoll = diceRoll();
+				cout << "You have rolled a " << dRoll << "!"<<endl;
+				if (dRoll >3)
+				{
+					cout << "You have succeded in casting the Spell, All other Players loses a life!! MOUHAHAHA!!"<<endl;
+					for (int i=0;i<numberOfPlayers;i++)
+					{
+						if ((!players[i].checkIfPermaDead()) && i!=turn)
+							players[i].getCharacter().loseLive(1);
+					}
+					endTurn = true;
+				}
+				else
+				{
+					cout << "You missed the spell ... nothing happened."<<endl;
+					endTurn = true;
+				}
+			}
+			if(endTurn)
+				break;
+			
+			//--Non-Rolling Non-Movement Alternatives to the Turn 2/2
+			//-Building a raft
+			if(players[turn].getCharacter().hasAxe() && players[turn].getCurrentArea()=="WOODS" && !players[turn].getCharacter().isBagFull())
+			{
+				cout<<"Would you like to use this turn to build a Raft instead of moving (y/n)?"<<endl;
+				cin>>decision;
+				if(decision)
+				{
+					players[turn].getCharacter().acquiresRaft();
+					endTurn = true;
+				}
+			}
+			if(endTurn)
+				break;
+
+			//--Non-Rolling Movement Alternatives to the Turn 1/2
+			//-Using a raft
+			if(players[turn].getCharacter().hasRaft() && players[turn].getCurrentRegion()=="outter")
+			{
+				cout<<"Would you like to use this turn to crosse the Storm River with your Raft instead of moving (y/n)?"<<endl;
+				cin>>decision;
+				if(decision)
+				{
+					//Implement raft crossing
+					endTurn = true;
+				}
+			}
+			if(endTurn)
+				break;
+
+			//--Non-Rolling Movement Alternatives to the Turn 2/2
+			//-Inside the Inner Region
+			int dRoll;
+			if (players[turn].getCurrentRegion()=="inner")
+			{
+				cout<<"While in the Inner Region of Talisman, one may only move to one area at the time."<<endl;
+				dRoll = 1;
+			}
+			//--Rolling Movement Alternative to the Turn
+			else
+			{
+				cout<<"Please press any key to roll the die." << endl;
+				system("PAUSE");
+				dRoll = diceRoll();
+				cout << "You have rolled a " << dRoll << "!"<<endl; 
+			}
+			char movedirection;
+			cout << "Would you like to move right(r) or left(l)?" << endl;
+			cin >> movedirection; //Must be idiot-proofed
+
+			//Moving Player's Character on the Board
 			for (int i=0; i<dRoll; i++)
 			{
 				if(movedirection == 'r')
@@ -130,8 +187,8 @@ int main(void){
 					cout<<"Can't move there!";
 				}
 
-
-				if(players[turn].getCurrentArea()=="SENTINEL" && inOutter)
+				//-Special landing points on board 1/4 Sentinel
+				if(players[turn].getCurrentArea()=="SENTINEL")
 				{
 				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the SENTINEL, would you like to tempt to cross the bridge? (y/n) " << endl;
 				cin>>decision;
@@ -141,13 +198,13 @@ int main(void){
 							<<"Would you like to continue right(r) or left(l)?"<<endl;
 						cin>>movedirection;
 						players[turn].setCurrentArea(TalismanMap,"middle","HILLS");
-						inOutter=false;
-						inMiddle=true;
+						players[turn].setCurrentRegion("middle");
 						i++;
 					}
 				}
 
-				if(players[turn].getCurrentArea()=="HILLS" && inMiddle)
+				//-Special landing points on board 2/4 Hills from the middle region
+				if(players[turn].getCurrentArea()=="HILLS" && players[turn].getCurrentRegion()=="middle")
 				{
 				cout << players[turn].getCharacter().getProfession() << ", you are back at the HILLS,would you like to cross the bridge? (y/n) " << endl;
 				cin>>decision;
@@ -157,11 +214,12 @@ int main(void){
 							<<"Would you like to continue right(r) or left(l)?"<<endl;
 						cin>>movedirection;
 						players[turn].setCurrentArea(TalismanMap,"outter","SENTINEL");
-						inMiddle=false;
-						inOutter=true;
+						players[turn].setCurrentRegion("outter");
 						i++;
 					}
 				}
+
+				//-Special landing points on board 3/4 Portal of Power
 				if(players[turn].getCurrentArea()=="PORTAL OF POWER")
 				{
 				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the PORTAL OF POWER, would you like to tempt to open it? (y/n) " << endl;
@@ -172,12 +230,30 @@ int main(void){
 							<<"Would you like to continue right(r) or left(l)?"<<endl;
 						cin>>movedirection;
 						players[turn].setCurrentArea(TalismanMap,"inner","PLAIN OF PERIL");
-						inInner = true;
-						inMiddle=false;
+						players[turn].setCurrentRegion("inner");
 						i++;
 					}
 				}
-			if(inInner)
+
+				//-Special landing points on board 4/4 Valey of Fire
+				if(players[turn].getCurrentArea()=="VALEY OF FIRE")
+				{
+				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the VALLEY OF FIRE!!"<<endl;
+					if(players[turn].getCharacter().hasTalisman())
+					{
+						cout<<"You have used your Talisman to enter into the Crown of Command!!\n"<<endl;
+						players[turn].setCurrentArea(TalismanMap,"crown","CROWN OF COMMAND");
+						players[turn].setCurrentRegion("crown");
+						i++;
+					}
+					else
+					{
+						cout<<"Sorry Adventurer, without the Talisman, you may not continue beyond this point, please move back toward the plain of Peril.\n"<<endl;
+					}
+				}
+
+				//Making sure player only moves one space while in the inner region
+				if(players[turn].getCurrentRegion()=="inner")
 				break;
 			}
 			

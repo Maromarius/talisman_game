@@ -16,6 +16,7 @@ public:
 	Region OutterRegion;
 	Region MiddleRegion;
 	Region InnerRegion;
+	Region Crown;
 
 	//Constructor & Destructor
 	Map();

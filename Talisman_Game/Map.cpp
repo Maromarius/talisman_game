@@ -26,4 +26,5 @@ Map::~Map()
 	delete &OutterRegion;
 	delete &MiddleRegion;
 	delete &InnerRegion;
+	delete &Crown;
 }

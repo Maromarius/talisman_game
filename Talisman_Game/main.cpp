@@ -36,58 +36,9 @@ int diceRoll(void)
 	return ((int) rand() % 6 + 1);
 }
 
-
-int main(void){
-	cout<<"/////////////////////////////////////////////\n"
-		<<"////-------------------------------------////\n"
-		<<"////--WELCOME TO THE WORLD OF TALISMAN!--////\n" 
-		<<"////-------------------------------------////\n"
-		<<"/////////////////////////////////////////////\n"<<endl;
-	
-	//--------------SETUP--------------
-	//--Board Setup
-	Map* TalismanMap = new Map();
-
-	//--Number of Players Setup
-	bool correctInput = false;
-	int characterNumberSelection;
-	while (!correctInput)
-	{
-		cout<<"How many players will be playing this game?"<<endl;	
-		cin>>characterNumberSelection;
-		//Checking for correct number of players
-		if(characterNumberSelection>1 && characterNumberSelection<=6)
-			correctInput = true;
-		if(!correctInput)
-			cout<<"I am sorry that number of players is not permitted, please try again."<<endl;
-	}
-	numberOfPlayers = characterNumberSelection;
-	numberOfPlayersAlive = numberOfPlayers;
-	Player *players = new Player[numberOfPlayers];
-		
-	//--Assign characters to players
-	initializeCharacterArray();
-	for (int i=1; i<numberOfPlayers+1; i++)
-	{
-		cout << "Creating Player " << i << endl;
-		new (&players[i]) Player(TalismanMap, isInPlay);
-		cout << players[i].getCharacter().getProfession() <<" has been created." << endl;
-		players[i].getCharacter().printStats();
-	}
-
-
-
-
-
-
-	//--------------GAME--------------
-	//while(numberOfPlayersAlive > 1)
-	for(int testTurns = 0 ; testTurns<20; testTurns++)
-	{
-		//----Character Movement/Activity on Board
-		if(!players[turn].checkIfPermaDead())
-		{
-			cout << "\nIt is currently Player " << turn << "'s turn!" << endl;
+void movementOnBoard(Player players[], int turn, Map* TalismanMap)
+{
+	cout << "\nIt is currently Player " << turn << "'s turn!" << endl;
 			cout << players[turn].getCharacter().getProfession() << ", you are at the "<< players[turn].getCurrentAreaName()<<endl;
 			char decision;
 			bool endTurn=false;
@@ -117,7 +68,7 @@ int main(void){
 				}
 			}
 			if(endTurn)
-				break;
+				return;
 			
 			//--Non-Rolling Non-Movement Alternatives to the Turn 2/2
 			//-Building a raft
@@ -132,7 +83,7 @@ int main(void){
 				}
 			}
 			if(endTurn)
-				break;
+				return;
 
 			//--Non-Rolling Movement Alternatives to the Turn 1/2
 			//-Using a raft
@@ -147,7 +98,7 @@ int main(void){
 				}
 			}
 			if(endTurn)
-				break;
+				return;
 
 			//--Non-Rolling Movement Alternatives to the Turn 2/2
 			//-Inside the Inner Region
@@ -251,16 +202,65 @@ int main(void){
 						cout<<"Sorry Adventurer, without the Talisman, you may not continue beyond this point, please move back toward the plain of Peril.\n"<<endl;
 					}
 				}
-
-				//Making sure player only moves one space while in the inner region
-				if(players[turn].getCurrentRegion()=="inner")
-				break;
 			}
 			
 			cout << players[turn].getCharacter().getProfession() << ", you are now at the "<< players[turn].getCurrentAreaName()
 				 <<"\n\n"<<players[turn].getCurrentAreaDescription()<<endl;
+}
 
-			
+int main(void){
+	cout<<"/////////////////////////////////////////////\n"
+		<<"////-------------------------------------////\n"
+		<<"////--WELCOME TO THE WORLD OF TALISMAN!--////\n" 
+		<<"////-------------------------------------////\n"
+		<<"/////////////////////////////////////////////\n"<<endl;
+	
+	//--------------SETUP--------------
+	//--Board Setup
+	Map* TalismanMap = new Map();
+
+	//--Number of Players Setup
+	bool correctInput = false;
+	int characterNumberSelection;
+	while (!correctInput)
+	{
+		cout<<"How many players will be playing this game?"<<endl;	
+		cin>>characterNumberSelection;
+		//Checking for correct number of players
+		if(characterNumberSelection>1 && characterNumberSelection<=6)
+			correctInput = true;
+		if(!correctInput)
+			cout<<"I am sorry that number of players is not permitted, please try again."<<endl;
+	}
+	numberOfPlayers = characterNumberSelection;
+	numberOfPlayersAlive = numberOfPlayers;
+	Player *players = new Player[numberOfPlayers];
+		
+	//--Assign characters to players
+	initializeCharacterArray();
+	for (int i=1; i<numberOfPlayers+1; i++)
+	{
+		cout << "Creating Player " << i << endl;
+		new (&players[i]) Player(TalismanMap, isInPlay);
+		cout << players[i].getCharacter().getProfession() <<" has been created." << endl;
+		players[i].getCharacter().printStats();
+	}
+
+
+
+
+
+
+	//--------------GAME--------------
+	//while(numberOfPlayersAlive > 1)
+	for(int testTurns = 0 ; testTurns<20; testTurns++)
+	{
+		//----Character Movement/Activity on Board
+		if(!players[turn].checkIfPermaDead())
+		{
+			movementOnBoard(players, turn, TalismanMap);
+
+			//Encounters
 		}
 		
 

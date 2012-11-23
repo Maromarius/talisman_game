@@ -1,6 +1,6 @@
 #include "Thief.h"
 
-const string Thief::LOCATION = "CITY";
+const string Thief::LOCATION = "City";
 const string Thief::ALIGNMENT = "Neutral";
 const string Thief::PROFESSION = "Thief";
 

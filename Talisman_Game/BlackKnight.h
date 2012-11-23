@@ -8,6 +8,8 @@ using namespace std;
  
 class BlackKnight: public Area
 {
+protected:
+
 public:
 	
     static const string NAME ;

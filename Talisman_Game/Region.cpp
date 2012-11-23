@@ -59,16 +59,39 @@ void Region::addAtTail(string areaName)
 	}
 }
 
+void Region::addAtTail(Area* a)
+{
+	if (this->head == NULL)
+	{
+		this->head = a;
+		this->tail = this->head;
+		this->head->left = this->head;
+		this->head->right = this->head;		
+	}
+	else
+	{
+		Area* temp = a;
+		
+		tail->left = temp;
+		head->right = temp;
+		temp->left = head;
+		temp->right = tail;
+		tail = temp;
+
+	}
+}
+
+
 void Region::deleteArea(string queryName)
 { 
 	Area* cursor = this->head;
 	bool found = true;  
 
 
-	while (cursor->areaName != queryName)
+	while (cursor->getAreaName() != queryName)
 	{
 		cursor = cursor->left;
-		if(cursor->areaName == head->areaName)	//Back at start without finding data
+		if(cursor->getAreaName() == head->getAreaName())	//Back at start without finding data
 		{	
 			found = false;	
 			break;
@@ -98,10 +121,10 @@ Area* Region::getArea(string queryName)
 	bool found = true;  
 
 
-	while (cursor->areaName != queryName)
+	while (cursor->getAreaName() != queryName)
 	{
 		cursor = cursor->left;
-		if(cursor->areaName == head->areaName)	//Back at start without finding data
+		if(cursor->getAreaName() == head->getAreaName())	//Back at start without finding data
 		{	
 			found = false;	
 			break;

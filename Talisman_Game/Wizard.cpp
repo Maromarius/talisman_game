@@ -1,6 +1,6 @@
 #include "Wizard.h"
 
-const string Wizard::LOCATION = "GRAVEYARD";
+const string Wizard::LOCATION = "Graveyard";
 const string Wizard::ALIGNMENT = "Evil";
 const string Wizard::PROFESSION = "Wizard";
 

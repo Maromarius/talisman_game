@@ -8,15 +8,21 @@ using namespace std;
 
 class Area
 {
-public:
-
+protected:
 	string areaName;
 	string areaDescription;
+	//vector <AdventureCard> adventurCards;
+	vector<Area*> raftDestination;
+
+public:
 	Area* left;
 	Area* right;
-	//vector <AdventureCard> adventurCards;
-
+	void setRaftDestination(Area*);
 	void effect();
+	string getAreaName();
+	string getAreaDescription();
+	Area* getRight();
+	Area* getLeft();
 	Area();
 	Area(string);
 	Area(string,string);

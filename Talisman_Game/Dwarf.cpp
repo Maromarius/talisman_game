@@ -1,6 +1,6 @@
 #include "Dwarf.h"
 
-const string Dwarf::LOCATION = "CRAGS";
+const string Dwarf::LOCATION = "Crags";
 const string Dwarf::ALIGNMENT = "Neutral";
 const string Dwarf::PROFESSION = "Dwarf";
 

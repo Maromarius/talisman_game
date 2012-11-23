@@ -1,6 +1,6 @@
 #include "Ghoul.h"
 
-const string Ghoul::LOCATION = "GRAVEYARD";
+const string Ghoul::LOCATION = "Graveyard";
 const string Ghoul::ALIGNMENT = "Evil";
 const string Ghoul::PROFESSION = "Ghoul";
 

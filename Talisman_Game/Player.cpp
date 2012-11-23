@@ -130,9 +130,14 @@ void Player::setCurrentArea(Map * Board, string region,string TargetArea)
 		this->currentArea = Board->Crown.getArea(TargetArea);
 }
 
-string Player::getCurrentArea(void)
+string Player::getCurrentAreaName(void)
 {
-	return currentArea->areaName;
+	return currentArea->getAreaName();
+}
+
+string Player::getCurrentAreaDescription(void)
+{
+	return currentArea->getAreaDescription();
 }
 
 string Player::getCurrentRegion(void)

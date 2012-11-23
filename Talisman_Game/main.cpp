@@ -50,18 +50,18 @@ int main(void){
 
 	//--Number of Players Setup
 	bool correctInput = false;
-	int characcterNumberSelection;
+	int characterNumberSelection;
 	while (!correctInput)
 	{
 		cout<<"How many players will be playing this game?"<<endl;	
-		cin>>characcterNumberSelection;
+		cin>>characterNumberSelection;
 		//Checking for correct number of players
-		if(characcterNumberSelection>1 && characcterNumberSelection<=6)
+		if(characterNumberSelection>1 && characterNumberSelection<=6)
 			correctInput = true;
 		if(!correctInput)
 			cout<<"I am sorry that number of players is not permitted, please try again."<<endl;
 	}
-	numberOfPlayers = characcterNumberSelection;
+	numberOfPlayers = characterNumberSelection;
 	numberOfPlayersAlive = numberOfPlayers;
 	Player *players = new Player[numberOfPlayers];
 		
@@ -88,13 +88,13 @@ int main(void){
 		if(!players[turn].checkIfPermaDead())
 		{
 			cout << "\nIt is currently Player " << turn << "'s turn!" << endl;
-			cout << players[turn].getCharacter().getProfession() << ", you are at the "<< players[turn].getCurrentArea()<<endl;
+			cout << players[turn].getCharacter().getProfession() << ", you are at the "<< players[turn].getCurrentAreaName()<<endl;
 			char decision;
 			bool endTurn=false;
 
 			//--Non-Rolling Non-Movement Alternative to the Turn 1/2
 			//-Casting the Command Spell
-			if(players[turn].getCurrentArea()=="CROWN OF COMMAND")
+			if(players[turn].getCurrentAreaName()=="Crown of Command")
 			{
 				cout<<players[turn].getCharacter().getProfession()<<", you are still at the COROWN OF COMMAND, please press any key to roll the die and cast the Command Spell!" << endl;
 				system("PAUSE");
@@ -121,7 +121,7 @@ int main(void){
 			
 			//--Non-Rolling Non-Movement Alternatives to the Turn 2/2
 			//-Building a raft
-			if(players[turn].getCharacter().hasAxe() && players[turn].getCurrentArea()=="WOODS" && !players[turn].getCharacter().isBagFull())
+			if(players[turn].getCharacter().hasAxe() && players[turn].getCurrentAreaName()=="Woods" && !players[turn].getCharacter().isBagFull())
 			{
 				cout<<"Would you like to use this turn to build a Raft instead of moving (y/n)?"<<endl;
 				cin>>decision;
@@ -138,7 +138,7 @@ int main(void){
 			//-Using a raft
 			if(players[turn].getCharacter().hasRaft() && players[turn].getCurrentRegion()=="outter")
 			{
-				cout<<"Would you like to use this turn to crosse the Storm River with your Raft instead of moving (y/n)?"<<endl;
+				cout<<"Would you like to use this turn to cross the Storm River with your Raft instead of moving (y/n)?"<<endl;
 				cin>>decision;
 				if(decision)
 				{
@@ -175,12 +175,12 @@ int main(void){
 				if(movedirection == 'r')
 				{
 					players[turn].moveCharacterRight();
-					cout << "You are moving towards the "<< players[turn].getCurrentArea()<<endl;
+					cout << "You are moving towards the "<< players[turn].getCurrentAreaName()<<endl;
 				}
 				else if(movedirection == 'l')
 				{
 					players[turn].moveCharacterLeft();
-					cout << "You are moving towards the "<< players[turn].getCurrentArea()<<endl;
+					cout << "You are moving towards the "<< players[turn].getCurrentAreaName()<<endl;
 				}
 				else
 				{
@@ -188,61 +188,61 @@ int main(void){
 				}
 
 				//-Special landing points on board 1/4 Sentinel
-				if(players[turn].getCurrentArea()=="SENTINEL")
+				if(players[turn].getCurrentAreaName()=="Sentinel")
 				{
-				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the SENTINEL, would you like to tempt to cross the bridge? (y/n) " << endl;
+				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the Sentinel, would you like to tempt to cross the bridge? (y/n) " << endl;
 				cin>>decision;
 					if(decision == 'y')
 					{
 						cout<<"Congratulations, you have crossed the bridge!!\n"
 							<<"Would you like to continue right(r) or left(l)?"<<endl;
 						cin>>movedirection;
-						players[turn].setCurrentArea(TalismanMap,"middle","HILLS");
+						players[turn].setCurrentArea(TalismanMap,"middle","Hills");
 						players[turn].setCurrentRegion("middle");
 						i++;
 					}
 				}
 
 				//-Special landing points on board 2/4 Hills from the middle region
-				if(players[turn].getCurrentArea()=="HILLS" && players[turn].getCurrentRegion()=="middle")
+				if(players[turn].getCurrentAreaName()=="Hills" && players[turn].getCurrentRegion()=="middle")
 				{
-				cout << players[turn].getCharacter().getProfession() << ", you are back at the HILLS,would you like to cross the bridge? (y/n) " << endl;
+				cout << players[turn].getCharacter().getProfession() << ", you are back at the Hills, would you like to cross the bridge? (y/n) " << endl;
 				cin>>decision;
 					if(decision == 'y')
 					{
 						cout<<"You have crossed the bridge!!\n"
 							<<"Would you like to continue right(r) or left(l)?"<<endl;
 						cin>>movedirection;
-						players[turn].setCurrentArea(TalismanMap,"outter","SENTINEL");
+						players[turn].setCurrentArea(TalismanMap,"outter","Sentinel");
 						players[turn].setCurrentRegion("outter");
 						i++;
 					}
 				}
 
 				//-Special landing points on board 3/4 Portal of Power
-				if(players[turn].getCurrentArea()=="PORTAL OF POWER")
+				if(players[turn].getCurrentAreaName()=="Portal of Power")
 				{
-				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the PORTAL OF POWER, would you like to tempt to open it? (y/n) " << endl;
+				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the Portal of Power, would you like to tempt to open it? (y/n) " << endl;
 				cin>>decision;
 					if(decision == 'y')
 					{
 						cout<<"You have opened the portal!!\n"
 							<<"Would you like to continue right(r) or left(l)?"<<endl;
 						cin>>movedirection;
-						players[turn].setCurrentArea(TalismanMap,"inner","PLAIN OF PERIL");
+						players[turn].setCurrentArea(TalismanMap,"inner","Plain of Peril");
 						players[turn].setCurrentRegion("inner");
 						i++;
 					}
 				}
 
 				//-Special landing points on board 4/4 Valey of Fire
-				if(players[turn].getCurrentArea()=="VALEY OF FIRE")
+				if(players[turn].getCurrentAreaName()=="Valey of Fire")
 				{
-				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the VALLEY OF FIRE!!"<<endl;
+				cout << players[turn].getCharacter().getProfession() << "!!, you have reach the Valey of Fire!!"<<endl;
 					if(players[turn].getCharacter().hasTalisman())
 					{
 						cout<<"You have used your Talisman to enter into the Crown of Command!!\n"<<endl;
-						players[turn].setCurrentArea(TalismanMap,"crown","CROWN OF COMMAND");
+						players[turn].setCurrentArea(TalismanMap,"crown","Crown of Command");
 						players[turn].setCurrentRegion("crown");
 						i++;
 					}
@@ -257,11 +257,12 @@ int main(void){
 				break;
 			}
 			
-			cout << players[turn].getCharacter().getProfession() << ", you are now at the "<< players[turn].getCurrentArea()<<endl;
+			cout << players[turn].getCharacter().getProfession() << ", you are now at the "<< players[turn].getCurrentAreaName()
+				 <<"\n\n"<<players[turn].getCurrentAreaDescription()<<endl;
 
 			
 		}
-
+		
 
 		(turn == numberOfPlayers)?(turn=1):(turn++);
 	}	

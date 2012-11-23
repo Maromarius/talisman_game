@@ -42,7 +42,8 @@ class Player
 		bool Player::checkIfPermaDead(void);
 		void Player::isNowPermaDead(void);
 		void Player::setCurrentArea(Map * Board,string region, string TargetArea);
-		string Player::getCurrentArea(void);
+		string Player::getCurrentAreaName(void);
+		string Player::getCurrentAreaDescription(void);
 		string Player::getCurrentRegion(void);
 		void Player::setCurrentRegion(string);
 		void moveCharacterLeft();

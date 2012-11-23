@@ -79,7 +79,7 @@
     <ClInclude Include="CursedGlade.h" />
     <ClInclude Include="Demon.h" />
     <ClInclude Include="Desert.h" />
-    <ClInclude Include="DiceWithHeart.h" />
+    <ClInclude Include="DiceWithDeath.h" />
     <ClInclude Include="Dragon.h" />
     <ClInclude Include="Druid.h" />
     <ClInclude Include="Dwarf.h" />
@@ -158,7 +158,7 @@
     <ClCompile Include="CursedGlade.cpp" />
     <ClCompile Include="Demon.cpp" />
     <ClCompile Include="Desert.cpp" />
-    <ClCompile Include="DiceWithHeart.cpp" />
+    <ClCompile Include="DiceWithDeath.cpp" />
     <ClCompile Include="Dragon.cpp" />
     <ClCompile Include="Druid.cpp" />
     <ClCompile Include="Dwarf.cpp" />

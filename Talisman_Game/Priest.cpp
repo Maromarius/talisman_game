@@ -1,6 +1,6 @@
 #include "Priest.h"
 
-const string Priest::LOCATION = "CHAPEL";
+const string Priest::LOCATION = "Chapel";
 const string Priest::ALIGNMENT = "Good";
 const string Priest::PROFESSION = "Priest";
 

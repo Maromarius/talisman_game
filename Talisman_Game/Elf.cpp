@@ -1,6 +1,6 @@
 #include "Elf.h"
 
-const string Elf::LOCATION = "FOREST";
+const string Elf::LOCATION = "Forest";
 const string Elf::ALIGNMENT = "Good";
 const string Elf::PROFESSION = "Elf";
 

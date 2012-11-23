@@ -1,6 +1,6 @@
 #include "Troll.h"
 
-const string Troll::LOCATION = "CRAGS";
+const string Troll::LOCATION = "Crags";
 const string Troll::ALIGNMENT = "Neutral";
 const string Troll::PROFESSION = "Troll";
 

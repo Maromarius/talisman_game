@@ -1,6 +1,6 @@
 #include "Ministrel.h"
 
-const string Ministrel::LOCATION = "TAVERN";
+const string Ministrel::LOCATION = "Tavern";
 const string Ministrel::ALIGNMENT = "Good";
 const string Ministrel::PROFESSION = "Ministrel";
 

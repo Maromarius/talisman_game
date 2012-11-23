@@ -259,11 +259,8 @@ int main(void){
 		if(!players[turn].checkIfPermaDead())
 		{
 			movementOnBoard(players, turn, TalismanMap);
-
 			//Encounters
 		}
-		
-
 		(turn == numberOfPlayers)?(turn=1):(turn++);
 	}	
 

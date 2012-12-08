@@ -10,7 +10,7 @@ const string Tavern::DESCRIPTION =	"You must roll the die for the following resu
 									"5)A drunkard offers to Teleport you to any Outer Region space of your choice on your next Move.\n"
 									"6)A boatman offers to Ferry you to the Temple on your next Move.";
 
-Tavern::Tavern() : Area(NAME, DESCRIPTION)
+Tavern::Tavern(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

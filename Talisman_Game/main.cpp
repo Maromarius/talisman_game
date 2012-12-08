@@ -260,6 +260,14 @@ int main(void){
 		{
 			movementOnBoard(players, turn, TalismanMap);
 			//Encounters
+			for (int i=0;i<numberOfPlayers;i++)
+				{
+					if (i!=turn && players[i].getCurrentAreamNumber() == players[turn].getCurrentAreamNumber()) 
+					{
+					
+					}
+				}
+
 		}
 		(turn == numberOfPlayers)?(turn=1):(turn++);
 	}	

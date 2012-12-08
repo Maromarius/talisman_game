@@ -10,7 +10,7 @@ const string Crags::DESCRIPTION =	"Roll 1 Die\n"
 									"\t 5. Safe; no effect\n"
 									"\t 6. A barbarian leads you out; gain 1 Strength\n";
 
-Crags::Crags() : Area(NAME, DESCRIPTION)
+Crags::Crags(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

@@ -13,7 +13,7 @@ const string WarlocksCave::DESCRIPTION =	"You may go on a quest.\n"
 									"Continue with the game. When you complete your task, the Warlock immediatly teleports you back here\n"
 									"(move directly without rolling) and gives you a talisman, if available, as your reward.\n";
 
-WarlocksCave::WarlocksCave() : Area(NAME, DESCRIPTION)
+WarlocksCave::WarlocksCave(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

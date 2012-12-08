@@ -16,7 +16,7 @@ const string Chapel::DESCRIPTION = "Based on Alignment\n\n"
 									"\t1. Gain 1 life\n"
 									"\t1. Gain 1 Spell\n";
 
-Chapel::Chapel() : Area(NAME, DESCRIPTION)
+Chapel::Chapel(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

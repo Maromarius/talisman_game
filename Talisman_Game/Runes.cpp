@@ -7,7 +7,7 @@ const string Runes::DESCRIPTION =	"Draw 1 Card\n"
 									"one here. Any Enemies that you fight on the\n"
 									"Space, add 2 to their Combat die roll.";
 
-Runes::Runes() : Area(NAME, DESCRIPTION)
+Runes::Runes(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

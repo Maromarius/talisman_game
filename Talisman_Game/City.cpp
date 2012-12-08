@@ -13,7 +13,7 @@ const string City::DESCRIPTION = "Visit only one of the following:\n"
 									"Doctor: He will Heal up to 2 Lives at the cost of 1 Gold Coin each.\n"
 									"Alchemist: He will turn any of your Objects into Gold Coin. Discard the Objects you choose and take 1 Gold Coin for each.\n";
 
-City::City() : Area(NAME, DESCRIPTION)
+City::City(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

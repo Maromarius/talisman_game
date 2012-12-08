@@ -8,7 +8,7 @@ const string Sentinel::DESCRIPTION =	"Draw 1 Card\n"
 									"don't draw a Card. Instead you must defeat the Sentinel (STRENGTH 9) to pass through\n"
 									"The Sentinel remains, even if defeated. You do not fight him when passing from the Middle Region.";
 
-Sentinel::Sentinel() : Area(NAME, DESCRIPTION)
+Sentinel::Sentinel(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

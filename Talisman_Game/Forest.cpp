@@ -10,7 +10,7 @@ const string Forest::DESCRIPTION =	"Roll 1 Die\n"
 									"\t5. Safe\n"
 									"\t6. A ranger guides you out; gain 1 Craft\n";
 
-Forest::Forest() : Area(NAME, DESCRIPTION)
+Forest::Forest(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

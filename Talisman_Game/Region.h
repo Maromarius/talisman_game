@@ -13,7 +13,6 @@ public:
 
 	Region();
 	~Region();
-	void addAtHead(string data);
 	void addAtTail(string data);
 	void addAtTail(Area*);
 	void deleteArea(string data);

@@ -5,26 +5,27 @@ using namespace std;
 
 Area::Area()
 {
-	areaName="";
-	areaDescription="";
-	left = NULL;
-	right = NULL;
+	this->areaName="";
+	this->areaDescription="";
+	this->left = NULL;
+	this->right = NULL;
 }
 
 Area::Area(string name)
 {
-	areaName=name;
-	areaDescription="";
-	left = NULL;
-	right = NULL;
+	this->areaName=name;
+	this->areaDescription="";
+	this->left = NULL;
+	this->right = NULL;
 }
 
-Area::Area(string name, string description)
+Area::Area(string name, string description, int areaNumber)
 {
-	areaName=name;
-	areaDescription=description;
-	left = NULL;
-	right = NULL;
+	this->mapAreaNumber=areaNumber;
+	this->areaName=name;
+	this->areaDescription=description;
+	this->left = NULL;
+	this->right = NULL;
 }
 
 Area::~Area()
@@ -44,6 +45,11 @@ string Area::getAreaName()
 string Area::getAreaDescription()
 {
 	return this->areaDescription;
+}
+
+int Area::getAreaMapNumber()
+{
+return this->mapAreaNumber;
 }
 
 Area* Area::getRight()

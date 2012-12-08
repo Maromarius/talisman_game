@@ -140,6 +140,11 @@ string Player::getCurrentAreaDescription(void)
 	return currentArea->getAreaDescription();
 }
 
+int Player::getCurrentAreamNumber(void)
+{
+	return currentArea->getAreaMapNumber();
+}
+
 string Player::getCurrentRegion(void)
 {
 	return this->currentRegion;

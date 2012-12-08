@@ -15,7 +15,7 @@ public:
     static const string NAME ;
     static const string DESCRIPTION;
 
-    BlackKnight();
+    BlackKnight(int);
     ~BlackKnight();
 };
 

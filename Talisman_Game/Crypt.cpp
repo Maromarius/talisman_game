@@ -10,7 +10,7 @@ const string Crypt::DESCRIPTION =	"Roll 3 Dice\n"
 									"\t4-5. Warlock's Cave\n"
 									"\t6+. City\n";
 
-Crypt::Crypt() : Area(NAME, DESCRIPTION)
+Crypt::Crypt(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

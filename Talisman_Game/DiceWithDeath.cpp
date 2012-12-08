@@ -7,7 +7,7 @@ const string DiceWithDeath::DESCRIPTION =	"You Must/n"
 											"Turn. If your score is lower: You lose 1 life and must Dice with Dice again on your next Turn.\n"
 											"If your score is higher: You may move on your next Turn.\n";
 
-DiceWithDeath::DiceWithDeath() : Area(NAME, DESCRIPTION)
+DiceWithDeath::DiceWithDeath(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

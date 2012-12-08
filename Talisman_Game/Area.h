@@ -13,6 +13,7 @@ protected:
 	string areaDescription;
 	//vector <AdventureCard> adventurCards;
 	vector<Area*> raftDestination;
+	int mapAreaNumber;
 
 public:
 	Area* left;
@@ -21,11 +22,12 @@ public:
 	void effect();
 	string getAreaName();
 	string getAreaDescription();
+	int getAreaMapNumber();
 	Area* getRight();
 	Area* getLeft();
 	Area();
 	Area(string);
-	Area(string,string);
+	Area(string,string,int);
 	~Area();
 };
 #endif

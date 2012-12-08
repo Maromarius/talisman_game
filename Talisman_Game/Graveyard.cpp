@@ -16,7 +16,7 @@ const string Graveyard::DESCRIPTION =	"Based on Alignment\n"
 										"\t5. Gain 1 fate\n"
 										"\t6. Gain 1 Spell\n";
 
-Graveyard::Graveyard() : Area(NAME, DESCRIPTION)
+Graveyard::Graveyard(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

@@ -15,7 +15,7 @@ const string Temple::DESCRIPTION =	"Pray by rolling 2 Dice.\n"
 									"11)Gain 1 Life.\n"
 									"12)Gain 2 Lives.";
 
-Temple::Temple() : Area(NAME, DESCRIPTION)
+Temple::Temple(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

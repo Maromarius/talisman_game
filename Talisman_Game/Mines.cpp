@@ -10,7 +10,7 @@ const string Mines::DESCRIPTION =	"Roll 3 Dice\n"
 									"\t4-5. Warlock's Cave\n"
 									"\t6+. Tavern\n";
 
-Mines::Mines() : Area(NAME, DESCRIPTION)
+Mines::Mines(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

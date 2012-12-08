@@ -13,7 +13,7 @@ public:
     static const string NAME ;
     static const string DESCRIPTION;
 
-    Castle();
+    Castle(int);
     ~Castle();
 };
 

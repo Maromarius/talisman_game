@@ -13,7 +13,7 @@ public:
     static const string NAME ;
     static const string DESCRIPTION;
 
-    DiceWithDeath();
+    DiceWithDeath(int);
     ~DiceWithDeath();
 };
 

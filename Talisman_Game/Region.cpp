@@ -16,27 +16,6 @@ Region::~Region()
 	delete tail;
 }
 
-void Region::addAtHead(string areaName)
-{
-	if (this->head == NULL)
-	{
-		this->head = new Area(areaName);
-		this->tail = this->head;
-		this->head->left = this->head;
-		this->head->right = this->head;		
-	}
-	else
-	{
-		Area* temp = new Area(areaName);
-		
-		tail->left = temp;
-		head->right = temp;
-		temp->left = head;
-		temp->right = tail;
-		head = temp;
-	}
-}
-
 void Region::addAtTail(string areaName)
 {
 	if (this->head == NULL)

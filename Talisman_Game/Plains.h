@@ -13,7 +13,7 @@ public:
     static const string NAME ;
     static const string DESCRIPTION;
 
-    Plains();
+    Plains(int);
     ~Plains();
 };
 

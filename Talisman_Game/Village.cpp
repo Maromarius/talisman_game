@@ -12,7 +12,7 @@ const string Village::DESCRIPTION =	"Visit only one of the following.\n"
 									"5) Gain 1 Craft.\n"
 									"6) Gain 1 Spell.";
 
-Village::Village() : Area(NAME, DESCRIPTION)
+Village::Village(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

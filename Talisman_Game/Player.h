@@ -43,6 +43,7 @@ class Player
 		void Player::isNowPermaDead(void);
 		void Player::setCurrentArea(Map * Board,string region, string TargetArea);
 		string Player::getCurrentAreaName(void);
+		int Player::getCurrentAreamNumber(void);
 		string Player::getCurrentAreaDescription(void);
 		string Player::getCurrentRegion(void);
 		void Player::setCurrentRegion(string);

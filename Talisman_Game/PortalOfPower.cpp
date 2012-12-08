@@ -11,7 +11,7 @@ const string PortalOfPower::DESCRIPTION =	"Draw 1 card\n"
 									"If the total is equal to or less than the chosen ability, Go to the Plain of Peril.\n"
 									"If it is higher, remain here and lose 1 from that ability";
 
-PortalOfPower::PortalOfPower() : Area(NAME, DESCRIPTION)
+PortalOfPower::PortalOfPower(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

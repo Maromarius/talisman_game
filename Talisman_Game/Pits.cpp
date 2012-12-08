@@ -7,7 +7,7 @@ const string Pits::DESCRIPTION =	"Roll 1 die\n"
 									"(STRENGTH 4 each) Each turn, fight them one-by-one until \n"
 									"you lose a Life. You may escape one Turn after all are dead";
 
-Pits::Pits() : Area(NAME, DESCRIPTION)
+Pits::Pits(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

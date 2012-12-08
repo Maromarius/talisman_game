@@ -8,7 +8,7 @@ const string VampiresTower::DESCRIPTION =	"You must roll 1 die to determine how 
 									"3-4) Lose 2 Lives. \n"
 									"5-6) Lose 3 Lives. \n";
 
-VampiresTower::VampiresTower() : Area(NAME, DESCRIPTION)
+VampiresTower::VampiresTower(int areaNumber) : Area(NAME, DESCRIPTION, areaNumber)
 {
 }
 

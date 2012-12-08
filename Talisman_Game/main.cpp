@@ -1,11 +1,9 @@
 #include "Map.h"
 #include "Player.h"
 #include "Character.h"
-#include "Object.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "Sword.h"
 using namespace std;
 
 const int MAXNUMBEROFPLAYERS = 6;

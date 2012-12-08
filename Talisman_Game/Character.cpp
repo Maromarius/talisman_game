@@ -29,7 +29,7 @@ Character::Character(int _baseStrength, int _baseCraft, int _baseLife, int _base
 	isAlive = true;
 
 
-	vector<Object> bag;
+	//vector<Object> bag;
 
     baseStrength = _baseStrength;
     baseCraft = _baseCraft;
@@ -63,7 +63,7 @@ Character::~Character(void)
 }
 
 //-----OBJECTS-----//
-void Character::addObject(Object obj){
+/*void Character::addObject(Object obj){
 	
 	
 	
@@ -261,7 +261,7 @@ int Character::getCounterCraft(){
 	return this->counterCraft;
 }
 
-string Character::showBag(){
+/*string Character::showBag(){
 
 	string temp = "";
 
@@ -276,11 +276,11 @@ string Character::showBag(){
 	return temp;
 }
 
-vector<Object> Character::getBag(){
+/*vector<Object> Character::getBag(){
 
 	return this->bag;
 
-}
+}*/
 
 int Character::getMaxObjectSize(){
 

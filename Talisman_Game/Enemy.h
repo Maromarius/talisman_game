@@ -2,15 +2,14 @@
 #define ENEMY_H
 #include <string>
 #include <iostream>
+#include "AdventureCard.h"
 
 
 using namespace std;
 
-class Enemy {
+class Enemy : public AdventureCard {
 
 protected:
-	string name;
-	string description;
 	string type;
 	int encounterNumber;
 	int strength;

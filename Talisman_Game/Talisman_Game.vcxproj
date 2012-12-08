@@ -60,15 +60,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AdventureCard.h" />
     <ClInclude Include="Ape.h" />
     <ClInclude Include="Area.h" />
-    <ClInclude Include="Armor.h" />
-    <ClInclude Include="Armour.h" />
     <ClInclude Include="Assassin.h" />
     <ClInclude Include="Axe.h" />
     <ClInclude Include="Bandit.h" />
+    <ClInclude Include="BattleObject.h" />
     <ClInclude Include="Bear.h" />
     <ClInclude Include="BlackKnight.h" />
+    <ClInclude Include="Card.h" />
     <ClInclude Include="Castle.h" />
     <ClInclude Include="Chapel.h" />
     <ClInclude Include="Character.h" />
@@ -77,6 +78,7 @@
     <ClInclude Include="Crags.h" />
     <ClInclude Include="Crypt.h" />
     <ClInclude Include="CursedGlade.h" />
+    <ClInclude Include="Deck.h" />
     <ClInclude Include="Demon.h" />
     <ClInclude Include="Desert.h" />
     <ClInclude Include="DiceWithDeath.h" />
@@ -103,7 +105,7 @@
     <ClInclude Include="Ministrel.h" />
     <ClInclude Include="Monk.h" />
     <ClInclude Include="Oasis.h" />
-    <ClInclude Include="Object.h" />
+    <ClInclude Include="CHANGE.h" />
     <ClInclude Include="Ogre.h" />
     <ClInclude Include="Pits.h" />
     <ClInclude Include="PlainOfPeril.h" />
@@ -120,7 +122,6 @@
     <ClInclude Include="Shadow.h" />
     <ClInclude Include="Sorceress.h" />
     <ClInclude Include="Spectre.h" />
-    <ClInclude Include="Sword.h" />
     <ClInclude Include="Tavern.h" />
     <ClInclude Include="Temple.h" />
     <ClInclude Include="Thief.h" />
@@ -130,7 +131,6 @@
     <ClInclude Include="Village.h" />
     <ClInclude Include="WarlocksCave.h" />
     <ClInclude Include="Warrior.h" />
-    <ClInclude Include="Weapon.h" />
     <ClInclude Include="WerewolfDen.h" />
     <ClInclude Include="WildBoar.h" />
     <ClInclude Include="Wizard.h" />
@@ -139,15 +139,16 @@
     <ClInclude Include="Wraith.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdventureCard.cpp" />
     <ClCompile Include="Ape.cpp" />
     <ClCompile Include="Area.cpp" />
-    <ClCompile Include="Armor.cpp" />
-    <ClCompile Include="Armour.cpp" />
     <ClCompile Include="Assassin.cpp" />
     <ClCompile Include="Axe.cpp" />
     <ClCompile Include="Bandit.cpp" />
+    <ClCompile Include="BattleObject.cpp" />
     <ClCompile Include="Bear.cpp" />
     <ClCompile Include="BlackKnight.cpp" />
+    <ClCompile Include="Card.cpp" />
     <ClCompile Include="Castle.cpp" />
     <ClCompile Include="Chapel.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -156,6 +157,7 @@
     <ClCompile Include="Crags.cpp" />
     <ClCompile Include="Crypt.cpp" />
     <ClCompile Include="CursedGlade.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="Demon.cpp" />
     <ClCompile Include="Desert.cpp" />
     <ClCompile Include="DiceWithDeath.cpp" />
@@ -183,7 +185,7 @@
     <ClCompile Include="Ministrel.cpp" />
     <ClCompile Include="Monk.cpp" />
     <ClCompile Include="Oasis.cpp" />
-    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="CHANGE.cpp" />
     <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="Pits.cpp" />
     <ClCompile Include="Plains.cpp" />
@@ -200,7 +202,6 @@
     <ClCompile Include="Shadow.cpp" />
     <ClCompile Include="Sorceress.cpp" />
     <ClCompile Include="Spectre.cpp" />
-    <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Tavern.cpp" />
     <ClCompile Include="Temple.cpp" />
     <ClCompile Include="Thief.cpp" />
@@ -210,7 +211,6 @@
     <ClCompile Include="Village.cpp" />
     <ClCompile Include="WarlocksCave.cpp" />
     <ClCompile Include="Warrior.cpp" />
-    <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="WerewolfDen.cpp" />
     <ClCompile Include="WildBoar.cpp" />
     <ClCompile Include="Wizard.cpp" />

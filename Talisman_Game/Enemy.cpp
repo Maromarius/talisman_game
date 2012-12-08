@@ -6,8 +6,8 @@ using namespace std;
 
 Enemy::Enemy(string name, string description,string type,int encounterNumber,int craft,int strength){
 
-	this->name = name;
-	this->description = description;
+	this->NAME = name;
+	this->DESCRIPTION = description;
 	this->type = type;
 	this->encounterNumber = encounterNumber;
 	this->craft = craft;
@@ -18,10 +18,10 @@ Enemy::~Enemy(){}
 
 string Enemy::getName(){
 
-	return this->name;
+	return this->NAME;
 }
 
 string Enemy::getDescription(){
-	return this->description;
+	return this->DESCRIPTION;
 
 }

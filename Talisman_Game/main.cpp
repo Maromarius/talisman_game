@@ -114,6 +114,12 @@ void movementOnBoard(Player players[], int turn, Map* TalismanMap)
 				dRoll = diceRoll();
 				cout << "You have rolled a " << dRoll << "!"<<endl; 
 			}
+			
+			char wannaSeeMap; 
+			cout<<"Map?"<<endl;
+			cin>>wannaSeeMap;
+			if(wannaSeeMap == 'y')
+				system("talisman-board.jpg");
 			char movedirection;
 			cout << "Would you like to move right(r) or left(l)?" << endl;
 			cin >> movedirection; //Must be idiot-proofed
@@ -207,11 +213,14 @@ void movementOnBoard(Player players[], int turn, Map* TalismanMap)
 }
 
 int main(void){
+	
+	
 	cout<<"/////////////////////////////////////////////\n"
 		<<"////-------------------------------------////\n"
 		<<"////--WELCOME TO THE WORLD OF TALISMAN!--////\n" 
 		<<"////-------------------------------------////\n"
 		<<"/////////////////////////////////////////////\n"<<endl;
+
 	
 	//--------------SETUP--------------
 	//--Board Setup
@@ -225,6 +234,7 @@ int main(void){
 		cout<<"How many players will be playing this game?"<<endl;	
 		cin>>characterNumberSelection;
 		//Checking for correct number of players
+	
 		if(characterNumberSelection>1 && characterNumberSelection<=6)
 			correctInput = true;
 		if(!correctInput)

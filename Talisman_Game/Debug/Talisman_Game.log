@@ -1,0 +1,184 @@
+﻿Build started 08/12/2012 9:09:17 PM.
+     1>Project "C:\Users\Maro\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\Talisman_Game.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug\Talisman_Game.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AdventureCard.cpp Ape.cpp Area.cpp Assassin.cpp Axe.cpp Bandit.cpp BattleObject.cpp Bear.cpp BlackKnight.cpp Card.cpp Castle.cpp Chapel.cpp Character.cpp Chasm.cpp City.cpp Crags.cpp Crypt.cpp CursedGlade.cpp Deck.cpp Demon.cpp Desert.cpp DiceWithDeath.cpp Dragon.cpp Druid.cpp Dwarf.cpp Elf.cpp Enemy.cpp Fields.cpp Forest.cpp Ghost.cpp Ghoul.cpp Giant.cpp Goblin.cpp Graveyard.cpp Helmet.cpp HiddenValley.cpp Hills.cpp Hobgoblin.cpp Lemure.cpp Lion.cpp main.cpp Map.cpp Mines.cpp Ministrel.cpp Monk.cpp Oasis.cpp CHANGE.cpp Ogre.cpp Pits.cpp Plains.cpp PlainOfPeril.cpp Player.cpp PortalOfPower.cpp Priest.cpp Prophetess.cpp Region.cpp Ruins.cpp Runes.cpp Sentinel.cpp Serpent.cpp Shadow.cpp Sorceress.cpp Spectre.cpp Tavern.cpp Temple.cpp Thief.cpp Troll.cpp ValleyOfFire.cpp VampiresTower.cpp Village.cpp WarlocksCave.cpp Warrior.cpp WerewolfDen.cpp WildBoar.cpp Wizard.cpp Wolf.cpp Woods.cpp Wraith.cpp
+         Wraith.cpp
+         Woods.cpp
+         Wolf.cpp
+         Wizard.cpp
+         WildBoar.cpp
+         WerewolfDen.cpp
+         Warrior.cpp
+         WarlocksCave.cpp
+         Village.cpp
+         VampiresTower.cpp
+         ValleyOfFire.cpp
+         Troll.cpp
+         Thief.cpp
+         Temple.cpp
+         Tavern.cpp
+         Spectre.cpp
+         Sorceress.cpp
+         Shadow.cpp
+         Serpent.cpp
+         Sentinel.cpp
+         Generating Code...
+         Compiling...
+         Runes.cpp
+         Ruins.cpp
+         Region.cpp
+         Prophetess.cpp
+         Priest.cpp
+         PortalOfPower.cpp
+         Player.cpp
+         PlainOfPeril.cpp
+         Plains.cpp
+         Pits.cpp
+         Ogre.cpp
+         CHANGE.cpp
+         Oasis.cpp
+         Monk.cpp
+         Ministrel.cpp
+         Mines.cpp
+         Map.cpp
+         main.cpp
+         Lion.cpp
+         Lemure.cpp
+         Generating Code...
+         Compiling...
+         Hobgoblin.cpp
+         Hills.cpp
+         HiddenValley.cpp
+         Helmet.cpp
+         Graveyard.cpp
+         Goblin.cpp
+         Giant.cpp
+         Ghoul.cpp
+         Ghost.cpp
+         Forest.cpp
+         Fields.cpp
+         Enemy.cpp
+         Elf.cpp
+         Dwarf.cpp
+         Druid.cpp
+         Dragon.cpp
+         DiceWithDeath.cpp
+         Desert.cpp
+         Demon.cpp
+         Deck.cpp
+     1>c:\users\maro\desktop\talisman_game.git\trunk\talisman_game\deck.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
+         Compiling...
+         CursedGlade.cpp
+         Crypt.cpp
+         Crags.cpp
+         City.cpp
+         Chasm.cpp
+         Character.cpp
+         Chapel.cpp
+         Castle.cpp
+         Card.cpp
+         BlackKnight.cpp
+         Bear.cpp
+         BattleObject.cpp
+         Bandit.cpp
+         Axe.cpp
+         Assassin.cpp
+         Area.cpp
+         Ape.cpp
+         AdventureCard.cpp
+         Generating Code...
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Maro\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Talisman_Game.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Maro\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Maro\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.lib" /MACHINE:X86 Debug\AdventureCard.obj
+         Debug\Ape.obj
+         Debug\Area.obj
+         Debug\Assassin.obj
+         Debug\Axe.obj
+         Debug\Bandit.obj
+         Debug\BattleObject.obj
+         Debug\Bear.obj
+         Debug\BlackKnight.obj
+         Debug\Card.obj
+         Debug\Castle.obj
+         Debug\Chapel.obj
+         Debug\Character.obj
+         Debug\Chasm.obj
+         Debug\City.obj
+         Debug\Crags.obj
+         Debug\Crypt.obj
+         Debug\CursedGlade.obj
+         Debug\Deck.obj
+         Debug\Demon.obj
+         Debug\Desert.obj
+         Debug\DiceWithDeath.obj
+         Debug\Dragon.obj
+         Debug\Druid.obj
+         Debug\Dwarf.obj
+         Debug\Elf.obj
+         Debug\Enemy.obj
+         Debug\Fields.obj
+         Debug\Forest.obj
+         Debug\Ghost.obj
+         Debug\Ghoul.obj
+         Debug\Giant.obj
+         Debug\Goblin.obj
+         Debug\Graveyard.obj
+         Debug\Helmet.obj
+         Debug\HiddenValley.obj
+         Debug\Hills.obj
+         Debug\Hobgoblin.obj
+         Debug\Lemure.obj
+         Debug\Lion.obj
+         Debug\main.obj
+         Debug\Map.obj
+         Debug\Mines.obj
+         Debug\Ministrel.obj
+         Debug\Monk.obj
+         Debug\Oasis.obj
+         Debug\CHANGE.obj
+         Debug\Ogre.obj
+         Debug\Pits.obj
+         Debug\Plains.obj
+         Debug\PlainOfPeril.obj
+         Debug\Player.obj
+         Debug\PortalOfPower.obj
+         Debug\Priest.obj
+         Debug\Prophetess.obj
+         Debug\Region.obj
+         Debug\Ruins.obj
+         Debug\Runes.obj
+         Debug\Sentinel.obj
+         Debug\Serpent.obj
+         Debug\Shadow.obj
+         Debug\Sorceress.obj
+         Debug\Spectre.obj
+         Debug\Tavern.obj
+         Debug\Temple.obj
+         Debug\Thief.obj
+         Debug\Troll.obj
+         Debug\ValleyOfFire.obj
+         Debug\VampiresTower.obj
+         Debug\Village.obj
+         Debug\WarlocksCave.obj
+         Debug\Warrior.obj
+         Debug\WerewolfDen.obj
+         Debug\WildBoar.obj
+         Debug\Wizard.obj
+         Debug\Wolf.obj
+         Debug\Woods.obj
+         Debug\Wraith.obj
+         Talisman_Game.vcxproj -> C:\Users\Maro\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Maro\Desktop\talisman_game.git\trunk\Debug\Talisman_Game.exe;#1" /manifest Debug\Talisman_Game.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\Talisman_Game.unsuccessfulbuild".
+         Touching "Debug\Talisman_Game.lastbuildstate".
+     1>Done Building Project "C:\Users\Maro\Desktop\talisman_game.git\trunk\Talisman_Game\Talisman_Game.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:06.12
